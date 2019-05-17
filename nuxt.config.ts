@@ -9,6 +9,13 @@ const config: NuxtConfiguration = {
   loading: { color: '#fff' },
 
   /**
+   * Customize the generated output folder
+   */
+  generate: {
+    dir: 'public'
+  },
+
+  /**
    *  Nuxt.js modules
    */
   modules: [
