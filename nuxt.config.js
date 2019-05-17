@@ -3,8 +3,66 @@ const pkg = require('./package')
 module.exports = {
   mode: 'universal',
 
-  /*
-   ** Headers of the page
+  /**
+   * Root directory of the app
+   */
+  srcDir: 'src/',
+
+  /**
+   *  Customize the progress-bar color
+   */
+  loading: { color: '#fff' },
+
+  /**
+   *  Nuxt.js modules
+   */
+  modules: [
+    // Doc: https://axios.nuxtjs.org/usage
+    '@nuxtjs/axios',
+
+    // Doc: https://bootstrap-vue.js.org/docs/
+    'bootstrap-vue/nuxt',
+
+    '@nuxtjs/pwa',
+
+    // Doc: https://github.com/nuxt-community/style-resources-module
+    '@nuxtjs/style-resources'
+  ],
+
+  /**
+   * Router configuration
+   */
+  router: {
+    middleware: 'i18n'
+  },
+
+  /**
+   *  Global CSS
+   */
+  css: [
+    'bootstrap/scss/bootstrap.scss'
+  ],
+
+  /**
+   * Include resources in all styles, for global variables
+   */
+  styleResources: {
+    scss: [
+      'bootstrap/scss/_functions.scss',
+      'bootstrap/scss/_variables.scss',
+      '~/assets/scss/*.scss'
+    ]
+  },
+
+  /**
+   *  Plugins to load before mounting the App
+   */
+  plugins: [
+    '~/plugins/i18n.ts'
+  ],
+
+  /**
+   * Headers of the page
    */
   head: {
     title: pkg.name,
@@ -16,31 +74,6 @@ module.exports = {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
 
-  /*
-   ** Customize the progress-bar color
-   */
-  loading: { color: '#fff' },
-
-  /*
-   ** Global CSS
-   */
-  css: [],
-
-  /*
-   ** Plugins to load before mounting the App
-   */
-  plugins: [],
-
-  /*
-   ** Nuxt.js modules
-   */
-  modules: [
-    // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios',
-    // Doc: https://bootstrap-vue.js.org/docs/
-    'bootstrap-vue/nuxt',
-    '@nuxtjs/pwa'
-  ],
   /*
    ** Axios module configuration
    */
