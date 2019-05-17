@@ -9,7 +9,7 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
 
-import Logo from '@/assets/logo.png'
+import Logo from '~/assets/logo.png'
 
 @Component({
   name: 'TopMenu'

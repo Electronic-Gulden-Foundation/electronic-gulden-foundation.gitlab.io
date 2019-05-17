@@ -1,12 +1,7 @@
-const pkg = require('./package')
+import NuxtConfiguration from '@nuxt/config'
 
-module.exports = {
+const config: NuxtConfiguration = {
   mode: 'universal',
-
-  /**
-   * Root directory of the app
-   */
-  srcDir: 'src/',
 
   /**
    *  Customize the progress-bar color
@@ -40,7 +35,7 @@ module.exports = {
    *  Global CSS
    */
   css: [
-    'bootstrap/scss/bootstrap.scss'
+    '~/assets/scss/common.scss'
   ],
 
   /**
@@ -50,7 +45,7 @@ module.exports = {
     scss: [
       'bootstrap/scss/_functions.scss',
       'bootstrap/scss/_variables.scss',
-      '~/assets/scss/*.scss'
+      '~/assets/scss/_variables.scss'
     ]
   },
 
@@ -61,15 +56,20 @@ module.exports = {
     '~/plugins/i18n.ts'
   ],
 
+  bootstrapVue: {
+    bootstrapCSS: false,
+    bootstrapVueCSS: false
+  },
+
   /**
    * Headers of the page
    */
   head: {
-    title: pkg.name,
+    title: 'De Nederlandse Cryptocurrency',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
+      { hid: 'description', name: 'description', content: 'De Nederlandse Cryptocurrency' }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
@@ -79,25 +79,7 @@ module.exports = {
    */
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
-  },
-
-  /*
-   ** Build configuration
-   */
-  build: {
-    /*
-     ** You can extend webpack config here
-     */
-    extend(config, ctx) {
-      // Run ESLint on save
-      if (ctx.isDev && ctx.isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/
-        })
-      }
-    }
   }
 }
+
+export default config

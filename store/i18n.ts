@@ -1,4 +1,4 @@
-import { ActionContext, ActionTree, GetterTree, MutationTree } from 'vuex'
+import { ActionTree, GetterTree, MutationTree } from 'vuex'
 
 export interface State {
   locales: string[]
@@ -20,11 +20,7 @@ export const getters: GetterTree<State, State> = {
   getLocale: (state: State) => state.locale
 }
 
-export interface Actions<S, R> extends ActionTree<State, State> {
-  setLocale(context: ActionContext<S, R>, locale: string): void
-}
-
-export const actions: Actions<State, State> = {
+export const actions: ActionTree<State, State> = {
   setLocale({ commit }, locale) {
     commit(types.SET_LOCALE, locale)
   }

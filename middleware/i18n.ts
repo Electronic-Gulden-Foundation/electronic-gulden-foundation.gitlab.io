@@ -1,4 +1,4 @@
-export default function ({ isHMR, app, store, route, params, error, redirect }) {
+export default function ({ isHMR, app, store, route, params, error, redirect }: any) {
   const defaultLocale = app.i18n.fallbackLocale
 
   if (isHMR) return

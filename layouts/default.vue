@@ -22,7 +22,7 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
 
-import TopMenu from '~/components/navigation/TopMenu'
+import TopMenu from '~/components/navigation/TopMenu.vue'
 import BackgroundImage from '~/assets/img/backgrounds/mill.png'
 
 @Component({
@@ -40,8 +40,6 @@ export default Default
 </script>
 
 <style lang="scss">
-@import 'source-sans-pro/source-sans-pro.css';
-
 body {
   overflow-x: hidden;
   font-family: 'Source Sans Pro', sans-serif;
