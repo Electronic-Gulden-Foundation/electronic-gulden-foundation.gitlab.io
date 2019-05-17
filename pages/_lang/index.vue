@@ -23,6 +23,13 @@
         </div>
       </b-col>
     </b-row>
+
+    <b-row>
+      <b-col class="mission-statement">
+        <div class="mission-statement-text" v-html="MissionStatementText" />
+      </b-col>
+      <b-col class="recent-news" />
+    </b-row>
   </b-container>
 </template>
 
@@ -31,8 +38,9 @@ import { Component, Vue } from 'vue-property-decorator'
 
 import Laptop from '~/assets/img/laptop.png'
 
+import MissionStatementText from '~/locales/text/missie.md'
+
 @Component({
-  name: 'index'
 })
 class Index extends Vue {
   laptopDisplayStyles = {
@@ -40,6 +48,8 @@ class Index extends Vue {
     width: Laptop.width,
     height: Laptop.height
   }
+
+  MissionStatementText = MissionStatementText
 }
 
 export default Index
@@ -98,6 +108,19 @@ export default Index
     font-style: italic;
     color: $gray-500;
     font-size: 1.2rem;
+  }
+}
+
+.mission-statement {
+  background-image: linear-gradient(
+    to right,
+    darken($efl-color, 10),
+    lighten($efl-color, 10)
+  );
+
+  .mission-statement-text {
+    padding: 25px;
+    color: #fff;
   }
 }
 </style>

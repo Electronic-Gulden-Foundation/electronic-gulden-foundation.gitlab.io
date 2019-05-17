@@ -82,7 +82,7 @@ body {
     .background-image-overlay {
       background-image: linear-gradient(
         to top right,
-        $efl-color,
+        darken($efl-color, 10),
         $efl-color 25%,
         transparentize($efl-color, 0.15) 50%,
         $efl-color 75%,

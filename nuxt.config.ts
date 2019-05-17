@@ -28,7 +28,10 @@ const config: NuxtConfiguration = {
     '@nuxtjs/pwa',
 
     // Doc: https://github.com/nuxt-community/style-resources-module
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+
+    // Doc: https://github.com/nuxt-community/modules/tree/master/packages/markdownit
+    '@nuxtjs/markdownit'
   ],
 
   /**
