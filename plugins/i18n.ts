@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import VueI18n from 'vue-i18n'
 
+import * as nl from '~/locales/nl'
+
 Vue.use(VueI18n)
 
 export default ({ app, store }: any) => {
@@ -10,7 +12,10 @@ export default ({ app, store }: any) => {
     locale: i18nState.locale,
     fallbackLocale: 'nl',
     messages: {
-      nl: require('~/locales/nl').default
+      nl: nl.messages
+    },
+    numberFormats: {
+      nl: nl.numberFormats
     }
   })
 

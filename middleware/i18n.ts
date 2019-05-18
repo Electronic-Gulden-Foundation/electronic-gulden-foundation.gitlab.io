@@ -1,7 +1,10 @@
+import { types } from '~/store/i18n'
+
 export default function ({ isHMR, app, store, route, params, error, redirect }: any) {
   const defaultLocale = app.i18n.fallbackLocale
 
-  if (isHMR) return
+  if (isHMR)
+    return
 
   const locale = params.lang || defaultLocale
   const i18nState = store.state.i18n
@@ -9,7 +12,7 @@ export default function ({ isHMR, app, store, route, params, error, redirect }: 
     return error({ message: 'This page could not be found', statusCode: 404 })
   }
 
-  store.commit('SET_LANG', locale)
+  store.commit('i18n/' + types.SET_LOCALE, locale)
   app.i18n.locale = i18nState.locale
 
   if (

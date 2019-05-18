@@ -30,17 +30,26 @@
       </b-col>
       <b-col class="recent-news" />
     </b-row>
+
+    <b-row>
+      <b-col>
+        <frontpage-ticker />
+      </b-col>
+    </b-row>
   </b-container>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
 
+import FrontpageTicker from '~/components/FrontpageTicker.vue'
 import Laptop from '~/assets/img/laptop.png'
-
 import MissionStatementText from '~/locales/text/missie.md'
 
 @Component({
+  components: {
+    FrontpageTicker
+  }
 })
 class Index extends Vue {
   laptopDisplayStyles = {

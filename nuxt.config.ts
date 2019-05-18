@@ -89,6 +89,9 @@ const config: NuxtConfiguration = {
    */
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
+    credentials: false,
+    proxyHeaders: false,
+    debug: true
   }
 }
 
