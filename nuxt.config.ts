@@ -31,7 +31,7 @@ const config: NuxtConfiguration = {
     '@nuxtjs/style-resources',
 
     // Doc: https://github.com/nuxt-community/modules/tree/master/packages/markdownit
-    '@nuxtjs/markdownit'
+    '@nuxtjs/markdownit',
   ],
 
   /**
@@ -45,7 +45,8 @@ const config: NuxtConfiguration = {
    *  Global CSS
    */
   css: [
-    '~/assets/scss/common.scss'
+    '@fortawesome/fontawesome-svg-core/styles.css',
+    '~/assets/scss/common.scss',
   ],
 
   /**
@@ -63,7 +64,8 @@ const config: NuxtConfiguration = {
    *  Plugins to load before mounting the App
    */
   plugins: [
-    '~/plugins/i18n.ts'
+    '~/plugins/fontawesome.ts',
+    '~/plugins/i18n.ts',
   ],
 
   bootstrapVue: {

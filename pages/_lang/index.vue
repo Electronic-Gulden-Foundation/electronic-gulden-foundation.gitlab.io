@@ -1,4 +1,4 @@
-<template>
+    <template>
   <b-container>
     <b-row class="title-wrapper" align-v="center">
       <b-col md="6">
@@ -28,7 +28,26 @@
       <b-col class="mission-statement">
         <div class="mission-statement-text" v-html="MissionStatementText" />
       </b-col>
+
       <b-col class="recent-news" />
+    </b-row>
+
+    <b-row class="social-media my-4">
+      <b-col cols="3" class="social-media">
+        <span class="social-media-text">
+          {{ $t('socialMedia.talkWithUs')}}
+        </span>
+      </b-col>
+
+      <b-col v-for="(item, index) in socialMediaItems"
+             :key="index"
+             class="social-media"
+             :class="item.class">
+        <a :href="item.href">
+          <fa :icon="item.icon" />
+          <span>{{ $t(item.name) }}</span>
+        </a>
+      </b-col>
     </b-row>
 
     <b-row>
@@ -45,6 +64,7 @@ import { Component, Vue } from 'vue-property-decorator'
 import FrontpageTicker from '~/components/FrontpageTicker.vue'
 import Laptop from '~/assets/img/laptop.png'
 import MissionStatementText from '~/locales/text/missie.md'
+import { faFacebookSquare, faReddit, faTwitter, faYoutube } from '~/node_modules/@fortawesome/free-brands-svg-icons'
 
 @Component({
   components: {
@@ -59,6 +79,33 @@ class Index extends Vue {
   }
 
   MissionStatementText = MissionStatementText
+
+  socialMediaItems = [
+    {
+      name: 'socialMedia.facebook',
+      icon: faFacebookSquare,
+      class: ['facebook'],
+      href: 'https://www.facebook.com/EFLFoundation/'
+    },
+    {
+      name: 'socialMedia.twitter',
+      icon: faTwitter,
+      class: ['twitter'],
+      href: 'https://twitter.com/ElecGulden'
+    },
+    {
+      name: 'socialMedia.youtube',
+      icon: faYoutube,
+      class: ['youtube'],
+
+    },
+    {
+      name: 'socialMedia.reddit',
+      icon: faReddit,
+      class: ['reddit'],
+      href: 'https://www.reddit.com/r/eflfoundation'
+    }
+  ]
 }
 
 export default Index
@@ -130,6 +177,14 @@ export default Index
   .mission-statement-text {
     padding: 25px;
     color: #fff;
+  }
+}
+
+.social-media {
+  .social-media-text {
+    color: $gray-500;
+    text-transform: uppercase;
+    font-weight: 600;
   }
 }
 </style>

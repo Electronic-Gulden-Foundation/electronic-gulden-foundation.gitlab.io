@@ -12,6 +12,13 @@ export const messages = {
     price_eur: 'EUR',
     market_cap_eur: 'Marktkapitalisatie',
     '24h_volume_eur': 'Volume (24h)'
+  },
+  socialMedia: {
+    facebook: 'Facebook',
+    reddit: 'Reddit',
+    talkWithUs: 'Praat met ons via social media',
+    twitter: 'Twitter',
+    youtube: 'Youtube',
   }
 }
 
