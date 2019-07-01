@@ -1,8 +1,14 @@
-    <template>
+<template>
   <b-container>
-    <b-row class="title-wrapper" align-v="center">
+    <b-row
+      class="title-wrapper mb-4"
+      align-v="center"
+    >
       <b-col md="6">
-        <h1 class="title" v-html="$t('pages.index.title')" />
+        <h1
+          class="title"
+          v-html="$t('pages.index.title')"
+        />
 
         <b-row>
           <b-col sm="6">
@@ -10,12 +16,17 @@
           </b-col>
         </b-row>
 
-        <h2 class="subtitle">{{ $t('pages.index.subtitle') }}</h2>
+        <h2 class="subtitle">
+          {{ $t('pages.index.subtitle') }}
+        </h2>
       </b-col>
 
       <b-col md="6">
         <div class="laptop-display-wrapper">
-          <div class="laptop-display" :style="laptopDisplayStyles" />
+          <div
+            class="laptop-display"
+            :style="laptopDisplayStyles"
+          />
 
           <blockquote class="laptop-text">
             {{ $t('pages.index.laptopText') }}
@@ -24,25 +35,61 @@
       </b-col>
     </b-row>
 
+    <b-row class="mb-4">
+      <b-col class="mission-statements py-4">
+        <b-carousel
+          id="mission-statements-carousel"
+          controls
+          indicators
+        >
+          <b-carousel-slide
+            v-for="(statement, index) in $t('missionStatement.statements')"
+            :key="index"
+            class="statement"
+            img-blank
+          >
+            <div
+              slot="img"
+              class="d-flex w-100 text-center justify-content-center align-items-center"
+              style="height: 230px;"
+            >
+              <div class="d-inline-block w-75">
+                <h3>{{ statement.title }}</h3>
+                <p>{{ statement.text }}</p>
+              </div>
+            </div>
+          </b-carousel-slide>
+        </b-carousel>
+      </b-col>
+    </b-row>
+
     <b-row>
       <b-col class="mission-statement">
-        <div class="mission-statement-text" v-html="MissionStatementText" />
+        <div
+          class="mission-statement-text"
+          v-html="MissionStatementText"
+        />
       </b-col>
 
       <b-col class="recent-news" />
     </b-row>
 
     <b-row class="social-media my-4">
-      <b-col cols="3" class="social-media">
+      <b-col
+        cols="3"
+        class="social-media"
+      >
         <span class="social-media-text">
-          {{ $t('socialMedia.talkWithUs')}}
+          {{ $t('socialMedia.talkWithUs') }}
         </span>
       </b-col>
 
-      <b-col v-for="(item, index) in socialMediaItems"
-             :key="index"
-             class="social-media"
-             :class="item.class">
+      <b-col
+        v-for="(item, index) in socialMediaItems"
+        :key="index"
+        class="social-media"
+        :class="item.class"
+      >
         <a :href="item.href">
           <fa :icon="item.icon" />
           <span>{{ $t(item.name) }}</span>
@@ -64,7 +111,12 @@ import { Component, Vue } from 'vue-property-decorator'
 import FrontpageTicker from '~/components/FrontpageTicker.vue'
 import Laptop from '~/assets/img/laptop.png'
 import MissionStatementText from '~/locales/text/missie.md'
-import { faFacebookSquare, faReddit, faTwitter, faYoutube } from '~/node_modules/@fortawesome/free-brands-svg-icons'
+import {
+  faFacebookSquare,
+  faReddit,
+  faTwitter,
+  faYoutube
+} from '~/node_modules/@fortawesome/free-brands-svg-icons'
 
 @Component({
   components: {
@@ -96,8 +148,7 @@ class Index extends Vue {
     {
       name: 'socialMedia.youtube',
       icon: faYoutube,
-      class: ['youtube'],
-
+      class: ['youtube']
     },
     {
       name: 'socialMedia.reddit',
@@ -167,7 +218,10 @@ export default Index
   }
 }
 
+.mission-statements,
 .mission-statement {
+  color: #fff;
+
   background-image: linear-gradient(
     to right,
     darken($efl-color, 10),
@@ -176,7 +230,15 @@ export default Index
 
   .mission-statement-text {
     padding: 25px;
-    color: #fff;
+  }
+
+  .statement {
+    h3 {
+      font-size: 2.2rem;
+    }
+    p {
+      font-size: 1.3rem;
+    }
   }
 }
 

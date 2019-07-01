@@ -1,7 +1,7 @@
-import Vue from 'vue'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { config } from '@fortawesome/fontawesome-svg-core'
+import Vue from 'vue';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import { config } from '@fortawesome/fontawesome-svg-core';
 
-config.autoAddCss = false
+config.autoAddCss = false;
 
-Vue.component('fa', FontAwesomeIcon)
+Vue.component('fa', FontAwesomeIcon);

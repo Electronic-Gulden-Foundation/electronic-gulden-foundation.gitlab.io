@@ -2,7 +2,10 @@
   <b-container fluid>
     <div class="background-image-container">
       <div class="background-image-wrapper">
-        <div class="background-image" :style="backgroundImageStyles" />
+        <div
+          class="background-image"
+          :style="backgroundImageStyles"
+        />
         <div class="background-image-overlay" />
       </div>
     </div>
