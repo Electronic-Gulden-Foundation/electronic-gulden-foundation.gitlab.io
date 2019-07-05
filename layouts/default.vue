@@ -10,15 +10,15 @@
       </div>
     </div>
 
-    <b-container>
-      <top-menu />
-    </b-container>
+    <b-row>
+      <b-container>
+        <top-menu />
+      </b-container>
+    </b-row>
 
-    <b-container>
-      <b-row>
-        <nuxt />
-      </b-row>
-    </b-container>
+    <b-row>
+      <nuxt />
+    </b-row>
   </b-container>
 </template>
 

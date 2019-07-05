@@ -32,7 +32,7 @@
 </template>
 
 <script lang="ts">
-import TickerMixin, {TickerInfo} from '~/components/mixins/TickerMixin'
+import TickerMixin, { TickerInfo } from '~/components/mixins/TickerMixin'
 import {Component, Mixins} from 'vue-property-decorator'
 
 @Component

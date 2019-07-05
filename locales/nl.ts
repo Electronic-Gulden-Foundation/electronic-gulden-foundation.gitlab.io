@@ -52,6 +52,9 @@ export const messages = {
 					'Niet te kopieren, vermeningvuldingen of te vervalsen. Eindeloos te delen, duurzaam, zuiver en oncensureerbaar'
 			}
 		]
+	},
+	wallets: {
+		title: 'Download je portemonnee'
 	}
 };
 
