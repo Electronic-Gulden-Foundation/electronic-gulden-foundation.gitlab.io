@@ -23,7 +23,7 @@
 </template>
 
 <script lang="ts">
-import { Component } from 'vue-property-decorator'
+import { Component, Vue } from 'vue-property-decorator'
 import {
   faAndroid,
   faApple,
@@ -34,7 +34,7 @@ import {
 import { faFileArchive } from '@fortawesome/free-solid-svg-icons'
 
 @Component
-class FrontPageWalletDownload {
+class FrontPageWalletDownload extends Vue {
 
   private baseUrl: string = 'https://github.com/Electronic-Gulden-Foundation/egulden/releases/download'
   private version: string = 'v1.4.3.2'

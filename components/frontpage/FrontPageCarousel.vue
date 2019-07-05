@@ -26,10 +26,10 @@
 </template>
 
 <script lang="ts">
-import { Component } from 'vue-property-decorator'
+import { Component, Vue } from 'vue-property-decorator'
 
 @Component
-class FrontPageCarousel {}
+class FrontPageCarousel extends Vue {}
 
 export default FrontPageCarousel
 </script>

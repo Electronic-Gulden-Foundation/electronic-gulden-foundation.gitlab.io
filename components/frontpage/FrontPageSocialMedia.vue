@@ -22,7 +22,7 @@
 </template>
 
 <script lang="ts">
-import { Component } from 'vue-property-decorator'
+import { Component, Vue } from 'vue-property-decorator'
 import {
   faFacebookSquare,
   faReddit,
@@ -30,7 +30,7 @@ import {
 } from '~/node_modules/@fortawesome/free-brands-svg-icons'
 
 @Component
-class FrontPageSocialMedia {
+class FrontPageSocialMedia extends Vue {
   socialMediaItems = [
     {
       name: 'socialMedia.facebook',

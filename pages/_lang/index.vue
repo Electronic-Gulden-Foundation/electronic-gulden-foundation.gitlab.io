@@ -74,10 +74,10 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
 
-import FrontPageCarousel from '~/components/frontpage/FrontPageCarousel'
-import FrontPageSocialMedia from '~/components/frontpage/FrontPageSocialMedia'
-import FrontPageTicker from '~/components/frontpage/FrontPageTicker'
-import FrontPageWalletDownload from '~/components/frontpage/FrontPageWalletDownload'
+import FrontPageCarousel from '~/components/frontpage/FrontPageCarousel.vue'
+import FrontPageSocialMedia from '~/components/frontpage/FrontPageSocialMedia.vue'
+import FrontPageTicker from '~/components/frontpage/FrontPageTicker.vue'
+import FrontPageWalletDownload from '~/components/frontpage/FrontPageWalletDownload.vue'
 
 import Laptop from '~/assets/img/laptop.png'
 import MissionStatementText from '~/locales/text/missie.md'
