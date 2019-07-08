@@ -58,15 +58,14 @@
         <b-row>
           <b-col />
 
-          <b-col class="wallet-download-background">
+          <b-col
+            class="wallet-download-background"
+            sm="8"
+          >
             <front-page-wallet-download />
           </b-col>
         </b-row>
       </b-container>
-    </b-row>
-
-    <b-row>
-      <b-container />
     </b-row>
   </b-container>
 </template>

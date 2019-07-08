@@ -4,20 +4,29 @@
       {{ $t('wallets.title') }}
     </h4>
 
-    <div class="versions-wrapper">
-      <a
-        v-for="(version, index) in versions"
-        :key="index"
-        :href="version.href"
-        target="_blank"
-        class="wallet-version"
-      >
-        <fa
-          class="icon"
-          :icon="version.icon"
+    <div class="wallets-content">
+      <div class="versions-wrapper">
+        <a
+          v-for="(version, index) in versions"
+          :key="index"
+          :href="version.href"
+          target="_blank"
+          class="wallet-version"
+        >
+          <fa
+            class="icon"
+            :icon="version.icon"
+          />
+          <div class="text">{{ version.name }}</div>
+        </a>
+      </div>
+
+      <div class="phone-image-wrapper">
+        <div
+          class="phone-image"
+          :style="{ 'backgroundImage': `url('${coinomiPhoneImage}')` }"
         />
-        <div class="text">{{ version.name }}</div>
-      </a>
+      </div>
     </div>
   </div>
 </template>
@@ -33,8 +42,12 @@ import {
 } from '@fortawesome/free-brands-svg-icons'
 import { faFileArchive } from '@fortawesome/free-solid-svg-icons'
 
+import CoinomiPhoneImage from '@/assets/img/coinomi.png'
+
 @Component
 class FrontPageWalletDownload extends Vue {
+
+  coinomiPhoneImage = CoinomiPhoneImage
 
   private baseUrl: string = 'https://github.com/Electronic-Gulden-Foundation/egulden/releases/download'
   private version: string = 'v1.4.3.2'
@@ -100,7 +113,13 @@ $version-margin-bottom: 20px;
   margin-bottom: 25px;
 }
 
+.wallets-content {
+  display: flex;
+}
+
 .versions-wrapper {
+  width: 50%;
+
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -135,6 +154,28 @@ $version-margin-bottom: 20px;
     &:hover {
       box-shadow: 0 0 3px rgba(255, 255, 255, 0.8);
     }
+  }
+}
+
+.phone-image-wrapper {
+  width: 50%;
+  margin-left: 30px;
+  position: relative;
+
+  .phone-image {
+    position: absolute;
+    top: -120px;
+    left: 0;
+    right: 0;
+    border: 5px solid black;
+    border-top-width: 40px;
+    border-bottom-width: 50px;
+    border-radius: 30px;
+
+    min-height: 650px;
+
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
 </style>
