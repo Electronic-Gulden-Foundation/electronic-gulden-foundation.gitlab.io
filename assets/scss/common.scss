@@ -5,3 +5,8 @@
 
 @import 'source-sans-pro/source-sans-pro.css';
 
+.btn {
+  &.btn-primary {
+    color: #fff;
+  }
+}

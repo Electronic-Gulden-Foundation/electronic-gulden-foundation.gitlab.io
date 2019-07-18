@@ -6,7 +6,10 @@
           class="title-wrapper mb-4"
           align-v="center"
         >
-          <b-col md="6" class="title-background">
+          <b-col
+            md="6"
+            class="title-background"
+          >
             <h1
               class="title"
               v-html="$t('pages.index.title')"
@@ -21,6 +24,35 @@
             <h2 class="subtitle">
               {{ $t('pages.index.subtitle') }}
             </h2>
+
+            <div class="buttons d-flex justify-content-start">
+              <div>
+                <no-ssr>
+                  <b-btn
+                    v-if="bestMatchingWalletVersion"
+                    :href="bestMatchingWalletVersion.href"
+                    variant="primary"
+                  >
+                    {{ $t('pages.index.buttons.downloadWallet', {
+                      walletName: bestMatchingWalletVersion.name
+                    }) }}
+                  </b-btn>
+                </no-ssr>
+
+                <a href="#wallet-versions" class="d-block text-center small">
+                  {{ $t('pages.index.buttons.downloadWalletOtherVersions') }}
+                </a>
+              </div>
+
+              <div>
+                <b-btn
+                  href="https://e-gulden.org"
+                  variant="primary"
+                >
+                  {{ $t('pages.index.buttons.backToOldWebsite') }}
+                </b-btn>
+              </div>
+            </div>
           </b-col>
 
           <b-col md="6">
@@ -31,9 +63,9 @@
               />
 
               <fa
+                v-b-modal.playVideoModal
                 :icon="laptopPlayIcon"
                 class="play-icon"
-                v-b-modal.playVideoModal
               />
 
               <b-modal
@@ -79,6 +111,7 @@
           </b-col>
 
           <b-col
+            id="wallet-versions"
             class="wallet-download-background"
             sm="8"
           >
@@ -91,9 +124,11 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
+import { Component, Mixins } from 'vue-property-decorator'
 
 import { faPlayCircle } from '@fortawesome/free-solid-svg-icons'
+
+import WalletsMixin from '~/components/mixins/WalletsMixin'
 
 import FrontPageCarousel from '~/components/frontpage/FrontPageCarousel.vue'
 import FrontPageExchanges from '~/components/frontpage/FrontPageExchanges.vue'
@@ -113,9 +148,9 @@ import MissionStatementText from '~/locales/text/missie.md'
     FrontPageWalletDownload
   }
 })
-class Index extends Vue {
+class Index extends Mixins(WalletsMixin) {
   laptopDisplayStyles = {
-    backgroundImage: `url(${Laptop})`,
+    backgroundImage: `url('${Laptop}')`,
     width: Laptop.width,
     height: Laptop.height
   }
@@ -123,7 +158,7 @@ class Index extends Vue {
   MissionStatementText = MissionStatementText
 
   laptopPlayIcon = faPlayCircle
-  laptopVideoUrl = "https://www.youtube-nocookie.com/embed/BtWSWYBH4TE?autoplay=1"
+  laptopVideoUrl = 'https://www.youtube-nocookie.com/embed/BtWSWYBH4TE?autoplay=1'
 }
 
 export default Index
@@ -156,6 +191,12 @@ export default Index
     color: $gray-500;
     text-transform: uppercase;
     font-weight: 600;
+  }
+
+  .buttons {
+    > div:not(:first-child) {
+      margin-left: 5px;
+    }
   }
 }
 

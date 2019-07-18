@@ -7,7 +7,7 @@
     <div class="wallets-content">
       <div class="versions-wrapper">
         <a
-          v-for="(version, index) in versions"
+          v-for="(version, index) in walletVersions"
           :key="index"
           :href="version.href"
           target="_blank"
@@ -32,73 +32,15 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
-import {
-  faAndroid,
-  faApple,
-  faLinux,
-  faRaspberryPi,
-  faWindows
-} from '@fortawesome/free-brands-svg-icons'
-import { faFileArchive } from '@fortawesome/free-solid-svg-icons'
+import { Component, Mixins } from 'vue-property-decorator'
+
+import WalletsMixin from '~/components/mixins/WalletsMixin'
 
 import CoinomiPhoneImage from '@/assets/img/coinomi.png'
 
 @Component
-class FrontPageWalletDownload extends Vue {
-
+class FrontPageWalletDownload extends Mixins(WalletsMixin) {
   coinomiPhoneImage = CoinomiPhoneImage
-
-  private baseUrl: string = 'https://github.com/Electronic-Gulden-Foundation/egulden/releases/download'
-  private version: string = 'v1.4.3.2'
-
-  versions = [
-    {
-      name: 'Windows 64-bit',
-      href: `${this.baseUrl}/${this.version}/egulden-1.4.3-win64-setup.exe`,
-      icon: faWindows
-    },
-    {
-      name: 'Windows 32-bit',
-      href: `${this.baseUrl}/${this.version}/egulden-1.4.3-win32-setup.exe`,
-      icon: faWindows
-    },
-    {
-      name: 'Mac OS',
-      href: `${this.baseUrl}/${this.version}/e-Gulden-Core.dmg`,
-      icon: faApple
-    },
-    {
-      name: 'Android',
-      href: 'https://play.google.com/store/apps/details?id=com.coinomi.wallet',
-      icon: faAndroid
-    },
-    {
-      name: 'iOS',
-      href: 'https://apps.apple.com/nl/app/coinomi-wallet/id1333588809',
-      icon: faApple
-    },
-    {
-      name: 'Linux 64-bit',
-      href: `${this.baseUrl}/${this.version}/linux-64-1.4.3.2.tar.xz`,
-      icon: faLinux
-    },
-    {
-      name: 'Linux 32-bit',
-      href: `${this.baseUrl}/${this.version}/linux-32-1.4.3.2.tar.xz`,
-      icon: faLinux
-    },
-    {
-      name: 'Linux ARM',
-      href: `${this.baseUrl}/${this.version}/linux-arm-1.4.3.2.tar.xz`,
-      icon: faRaspberryPi
-    },
-    {
-      name: 'Broncode',
-      href: `https://github.com/Electronic-Gulden-Foundation/egulden/archive/${this.version}.tar.gz`,
-      icon: faFileArchive
-    }
-  ]
 }
 
 export default FrontPageWalletDownload

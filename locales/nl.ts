@@ -3,7 +3,12 @@ export const messages = {
 		index: {
 			title: 'Het nieuwe <b>Nederlandse</b> geld',
 			subtitle: 'uw financiële vrijheid!',
-			laptopText: 'Citaat van een leuk artikel voor een goede eerste indruk.'
+			laptopText: 'Citaat van een leuk artikel voor een goede eerste indruk.',
+			buttons: {
+				backToOldWebsite: 'Terug naar oude website',
+				downloadWallet: 'Download ({walletName})',
+        downloadWalletOtherVersions: 'Andere versies'
+			}
 		}
 	},
 	exchanges: {
