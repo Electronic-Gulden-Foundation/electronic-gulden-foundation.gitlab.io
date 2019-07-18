@@ -30,9 +30,27 @@
                 :style="laptopDisplayStyles"
               />
 
-              <blockquote class="laptop-text">
-                {{ $t('pages.index.laptopText') }}
-              </blockquote>
+              <fa
+                :icon="laptopPlayIcon"
+                class="play-icon"
+                v-b-modal.playVideoModal
+              />
+
+              <b-modal
+                id="playVideoModal"
+                hide-header
+                hide-footer
+                body-class="p-0"
+                size="lg"
+              >
+                <div class="video-wrapper">
+                  <b-embed
+                    type="iframe"
+                    :src="laptopVideoUrl"
+                    allowfullscreen
+                  />
+                </div>
+              </b-modal>
             </div>
           </b-col>
         </b-row>
@@ -75,6 +93,8 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
 
+import { faPlayCircle } from '@fortawesome/free-solid-svg-icons'
+
 import FrontPageCarousel from '~/components/frontpage/FrontPageCarousel.vue'
 import FrontPageExchanges from '~/components/frontpage/FrontPageExchanges.vue'
 import FrontPageSocialMedia from '~/components/frontpage/FrontPageSocialMedia.vue'
@@ -101,6 +121,9 @@ class Index extends Vue {
   }
 
   MissionStatementText = MissionStatementText
+
+  laptopPlayIcon = faPlayCircle
+  laptopVideoUrl = "https://www.youtube-nocookie.com/embed/BtWSWYBH4TE?autoplay=1"
 }
 
 export default Index
@@ -160,10 +183,31 @@ export default Index
     color: $gray-500;
     font-size: 1.2rem;
   }
+
+  .play-icon {
+    $size: 125px;
+
+    position: absolute;
+    top: calc(50% - #{$size / 2});
+    left: calc(50% - #{$size / 2});
+
+    vertical-align: middle;
+    font-size: $size;
+    color: $gray-200;
+    cursor: pointer;
+    z-index: 1000;
+  }
 }
 
 .wallet-download-background {
   background-color: $efl-blue;
   color: #fff;
+}
+
+#playVideoModal {
+  /deep/ .modal-body {
+    background-color: transparent;
+    padding: none;
+  }
 }
 </style>
