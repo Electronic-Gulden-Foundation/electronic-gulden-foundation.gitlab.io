@@ -32,12 +32,12 @@ export const messages = {
 					'Een voor iedereen toegankelijk financieel netwerk met een Nederlands tintje'
 			},
 			{
-				title: 'Financiële vrijheid',
+				title: 'Vrijheid',
 				text:
 					'Doorbreekt het bankmonopolie en legt het beschikkingsrecht over geld terug bij de eigenaar van dat geld'
 			},
 			{
-				title: 'Financiële privacy',
+				title: 'Privacy',
 				text:
 					'De balans tussen de macht van de overheid en privacy als universeel recht van de mens is aan het verschuiven.'
 			},

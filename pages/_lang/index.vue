@@ -55,25 +55,25 @@
           </b-col>
         </b-row>
 
-        <b-row class="mb-4">
+        <b-row class="row-margin">
           <b-col class="py-4">
             <front-page-carousel />
           </b-col>
         </b-row>
 
-        <b-row class="my-4">
+        <b-row class="row-margin">
           <b-col>
             <front-page-social-media />
           </b-col>
         </b-row>
 
-        <b-row>
+        <b-row class="row-margin">
           <b-col>
             <front-page-ticker />
           </b-col>
         </b-row>
 
-        <b-row>
+        <b-row class="row-margin">
           <b-col sm="4">
             <front-page-exchanges />
           </b-col>
@@ -209,5 +209,9 @@ export default Index
     background-color: transparent;
     padding: none;
   }
+}
+
+.row-margin {
+  margin-top: 50px;
 }
 </style>
