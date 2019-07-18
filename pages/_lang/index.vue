@@ -56,7 +56,9 @@
         </b-row>
 
         <b-row>
-          <b-col />
+          <b-col sm="4">
+            <front-page-exchanges />
+          </b-col>
 
           <b-col
             class="wallet-download-background"
@@ -74,6 +76,7 @@
 import { Component, Vue } from 'vue-property-decorator'
 
 import FrontPageCarousel from '~/components/frontpage/FrontPageCarousel.vue'
+import FrontPageExchanges from '~/components/frontpage/FrontPageExchanges.vue'
 import FrontPageSocialMedia from '~/components/frontpage/FrontPageSocialMedia.vue'
 import FrontPageTicker from '~/components/frontpage/FrontPageTicker.vue'
 import FrontPageWalletDownload from '~/components/frontpage/FrontPageWalletDownload.vue'
@@ -84,6 +87,7 @@ import MissionStatementText from '~/locales/text/missie.md'
 @Component({
   components: {
     FrontPageCarousel,
+    FrontPageExchanges,
     FrontPageSocialMedia,
     FrontPageTicker,
     FrontPageWalletDownload

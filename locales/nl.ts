@@ -6,6 +6,9 @@ export const messages = {
 			laptopText: 'Citaat van een leuk artikel voor een goede eerste indruk.'
 		}
 	},
+	exchanges: {
+		title: 'Handelen'
+	},
 	ticker: {
 		symbol: 'Symbol',
 		price_btc: 'BTC',
