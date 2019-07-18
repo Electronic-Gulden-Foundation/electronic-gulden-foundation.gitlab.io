@@ -62,5 +62,18 @@ export default FrontpageTicker
     font-weight: 400;
     padding: 10px 0;
   }
+
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+
+    dd, dt {
+      display: inline-block;
+      width: 49%;
+    }
+
+    dd {
+      text-align: right;
+    }
+  }
 }
 </style>

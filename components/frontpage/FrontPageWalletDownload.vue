@@ -178,4 +178,14 @@ $version-margin-bottom: 20px;
     background-repeat: no-repeat;
   }
 }
+
+@include media-breakpoint-down(md) {
+  .versions-wrapper {
+    width: 100%;
+  }
+
+  .phone-image-wrapper {
+    display: none;
+  }
+}
 </style>

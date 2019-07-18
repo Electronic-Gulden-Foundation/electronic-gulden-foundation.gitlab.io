@@ -1,20 +1,23 @@
 <template>
   <div class="social-media-wrapper">
-    <div class="social-media-text">
+    <div class="social-media-text d-none d-sm-block">
       {{ $t('socialMedia.talkWithUs') }}
     </div>
 
     <div
       v-for="(item, index) in socialMediaItems"
       :key="index"
-      class="social-media"
+      class="social-media text-center"
       :class="item.class"
     >
       <a :href="item.href">
-        <fa
-          class="icon"
-          :icon="item.icon"
-        />
+        <div class="icon-wrapper d-block d-sm-inline">
+          <fa
+            class="icon"
+            :icon="item.icon"
+          />
+        </div>
+
         <span class="name">{{ $t(item.name) }}</span>
       </a>
     </div>

@@ -6,7 +6,7 @@
           class="title-wrapper mb-4"
           align-v="center"
         >
-          <b-col md="6">
+          <b-col md="6" class="title-background">
             <h1
               class="title"
               v-html="$t('pages.index.title')"
@@ -132,6 +132,12 @@ export default Index
 <style lang="scss" scoped>
 .title-wrapper {
   margin-top: 150px;
+
+  .title-background {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+  }
 
   .title {
     color: $efl-color;
