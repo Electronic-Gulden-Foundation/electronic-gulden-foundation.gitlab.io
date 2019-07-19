@@ -62,7 +62,8 @@ class WalletsMixin extends Vue {
 		}
 	};
 
-	get bestMatchingWalletVersion() {
+	public get bestMatchingWalletVersion() {
+		// @ts-ignore
 		if (!process.browser) {
 			return {};
 		}
