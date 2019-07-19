@@ -54,7 +54,7 @@ const config: NuxtConfiguration = {
 	 */
 	styleResources: {
 		scss: [
-      '~/assets/scss/_variables.scss',
+			'~/assets/scss/_variables.scss',
 			'bootstrap/scss/_functions.scss',
 			'bootstrap/scss/_variables.scss',
 			'bootstrap/scss/_mixins.scss'

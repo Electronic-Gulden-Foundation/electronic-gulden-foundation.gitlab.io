@@ -6,8 +6,8 @@ export const messages = {
 			laptopText: 'Citaat van een leuk artikel voor een goede eerste indruk.',
 			buttons: {
 				backToOldWebsite: 'Terug naar oude website',
-				downloadWallet: 'Download ({walletName})',
-        downloadWalletOtherVersions: 'Andere versies'
+				downloadWallet: 'Download voor {walletName}',
+				downloadWalletOtherVersions: 'Andere versies'
 			}
 		}
 	},

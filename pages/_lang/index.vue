@@ -39,7 +39,10 @@
                   </b-btn>
                 </no-ssr>
 
-                <a href="#wallet-versions" class="d-block text-center small">
+                <a
+                  href="#wallet-versions"
+                  class="d-block text-center small"
+                >
                   {{ $t('pages.index.buttons.downloadWalletOtherVersions') }}
                 </a>
               </div>
