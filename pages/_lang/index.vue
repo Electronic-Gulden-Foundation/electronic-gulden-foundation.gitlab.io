@@ -32,6 +32,7 @@
                     v-if="bestMatchingWalletVersion"
                     :href="bestMatchingWalletVersion.href"
                     variant="primary"
+                    size="lg"
                   >
                     {{ $t('pages.index.buttons.downloadWallet', {
                       walletName: bestMatchingWalletVersion.name
@@ -50,7 +51,8 @@
               <div>
                 <b-btn
                   href="https://e-gulden.org"
-                  variant="primary"
+                  variant="outline-primary"
+                  size="lg"
                 >
                   {{ $t('pages.index.buttons.backToOldWebsite') }}
                 </b-btn>
@@ -197,6 +199,8 @@ export default Index
   }
 
   .buttons {
+    margin-top: 35px;
+
     > div:not(:first-child) {
       margin-left: 5px;
     }

@@ -6,26 +6,26 @@
     </div>
 
     <div>
-      <dt>{{ $t('ticker.price_btc') }}</dt>
-      <dd>₿ {{ tickerInfo && tickerInfo.price_btc }}</dd>
+      <dt>{{ $t('ticker.priceBtc') }}</dt>
+      <dd>₿ {{ tickerInfo && tickerInfo.priceBtc }}</dd>
     </div>
 
     <div>
-      <dt>{{ $t('ticker.price_eur') }}</dt>
+      <dt>{{ $t('ticker.priceEur') }}</dt>
       <dd>
-        {{ tickerInfo && $n(tickerInfo.price_eur, 'currency-eur-detailed') }}
+        {{ tickerInfo && $n(tickerInfo.priceEur, 'currency-eur-detailed') }}
       </dd>
     </div>
 
     <div>
-      <dt>{{ $t('ticker.market_cap_eur') }}</dt>
-      <dd>{{ tickerInfo && $n(tickerInfo.market_cap_eur, 'currency-eur') }}</dd>
+      <dt>{{ $t('ticker.marketCapEur') }}</dt>
+      <dd>{{ tickerInfo && $n(tickerInfo.marketCapEur, 'currency-eur') }}</dd>
     </div>
 
     <div>
-      <dt>{{ $t('ticker.24h_volume_eur') }}</dt>
+      <dt>{{ $t('ticker.dayVolumeEur') }}</dt>
       <dd>
-        {{ tickerInfo && $n(tickerInfo['24h_volume_eur'], 'currency-eur') }}
+        {{ tickerInfo && $n(tickerInfo.dayVolumeEur, 'currency-eur') }}
       </dd>
     </div>
   </div>

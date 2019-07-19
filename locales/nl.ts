@@ -16,10 +16,10 @@ export const messages = {
 	},
 	ticker: {
 		symbol: 'Symbol',
-		price_btc: 'BTC',
-		price_eur: 'EUR',
-		market_cap_eur: 'Marktkapitalisatie',
-		'24h_volume_eur': 'Volume (24h)'
+		priceBtc: 'BTC',
+		priceEur: 'EUR',
+		marketCapEur: 'Marktkapitalisatie',
+		dayVolumeEur: 'Volume (24h)'
 	},
 	socialMedia: {
 		facebook: 'Facebook',

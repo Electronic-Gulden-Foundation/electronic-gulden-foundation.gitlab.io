@@ -8,5 +8,15 @@
 .btn {
   &.btn-primary {
     color: #fff;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  &.btn-outline-primary {
+    &:hover {
+      color: #fff;
+    }
   }
 }
