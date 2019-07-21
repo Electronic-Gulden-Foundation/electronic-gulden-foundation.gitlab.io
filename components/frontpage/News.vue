@@ -6,14 +6,18 @@
       v-for="(news, index) in news"
       :key="index"
     >
-			<a :href="news.text" class="news-item" target="_blank">
-				<div class="news-title-wrapper">
-					{{ news.title }}
-				</div>
-				<div class="news-icon-wrapper">
-					<fa :icon="goToNewsIcon" />
-				</div>
-			</a>
+      <a
+        :href="news.text"
+        class="news-item"
+        target="_blank"
+      >
+        <div class="news-title-wrapper">
+          {{ news.title }}
+        </div>
+        <div class="news-icon-wrapper">
+          <fa :icon="goToNewsIcon" />
+        </div>
+      </a>
     </div>
   </div>
 </template>

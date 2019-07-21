@@ -64,9 +64,9 @@ export const messages = {
   wallets: {
     title: 'Download je portemonnee'
   },
-	recentNews: {
-  	title: 'Laatste nieuws'
-	}
+  recentNews: {
+    title: 'Laatste nieuws'
+  }
 }
 
 export const numberFormats = {
