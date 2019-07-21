@@ -37,13 +37,7 @@ export default FrontPageCarousel
 <style lang="scss" scoped>
 .mission-statements,
 .mission-statement {
-  color: #fff;
-
-  background-image: linear-gradient(
-      to right,
-      darken($efl-color, 10),
-      lighten($efl-color, 10)
-  );
+  @include efl-orange-gradient-background;
 
   .mission-statement-text {
     padding: 25px;

@@ -100,6 +100,16 @@
 
         <b-row class="row-margin">
           <b-col>
+            <mission-statement />
+          </b-col>
+
+          <b-col>
+            <news />
+          </b-col>
+        </b-row>
+
+        <b-row class="row-margin">
+          <b-col>
             <front-page-social-media />
           </b-col>
         </b-row>
@@ -140,9 +150,10 @@ import FrontPageExchanges from '~/components/frontpage/FrontPageExchanges.vue'
 import FrontPageSocialMedia from '~/components/frontpage/FrontPageSocialMedia.vue'
 import FrontPageTicker from '~/components/frontpage/FrontPageTicker.vue'
 import FrontPageWalletDownload from '~/components/frontpage/FrontPageWalletDownload.vue'
+import MissionStatement from '~/components/frontpage/MissionStatement.vue'
+import News from '~/components/frontpage/News.vue'
 
 import Laptop from '~/assets/img/laptop.png'
-import MissionStatementText from '~/locales/text/missie.md'
 
 @Component({
   components: {
@@ -150,7 +161,9 @@ import MissionStatementText from '~/locales/text/missie.md'
     FrontPageExchanges,
     FrontPageSocialMedia,
     FrontPageTicker,
-    FrontPageWalletDownload
+    FrontPageWalletDownload,
+    MissionStatement,
+    News
   }
 })
 class Index extends Mixins(WalletsMixin) {
@@ -159,8 +172,6 @@ class Index extends Mixins(WalletsMixin) {
     width: Laptop.width,
     height: Laptop.height
   }
-
-  MissionStatementText = MissionStatementText
 
   laptopPlayIcon = faPlayCircle
   laptopVideoUrl = 'https://www.youtube-nocookie.com/embed/BtWSWYBH4TE?autoplay=1'

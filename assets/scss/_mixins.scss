@@ -1,0 +1,8 @@
+@mixin efl-orange-gradient-background {
+  background-image: linear-gradient(
+      to right,
+      darken($efl-color, 10),
+      lighten($efl-color, 10)
+  );
+  color: $gray-100;
+}
