@@ -17,7 +17,8 @@ var news = fs
     }
   })
 
-fs.writeFileSync(
-  __dirname + '/../../assets/newsmanifest.json',
-  JSON.stringify(news)
-)
+var manifestFile = __dirname + '/../../assets/newsmanifest.json'
+
+fs.writeFileSync(manifestFile, JSON.stringify(news))
+
+console.log('Wrote ' + news.length + ' news items to ' + manifestFile)
