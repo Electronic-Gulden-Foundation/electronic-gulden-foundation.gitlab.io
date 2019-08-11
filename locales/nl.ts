@@ -18,6 +18,10 @@ export const messages = {
     altilly: 'Altilly',
     novaexchange: 'Novaexchange'
   },
+  footer: {
+    copyRightText: 'De e-Gulden Community',
+    helpImproveWebsite: 'Help mee deze website te verbeteren'
+  },
   ticker: {
     symbol: 'Symbol',
     priceBtc: 'BTC',

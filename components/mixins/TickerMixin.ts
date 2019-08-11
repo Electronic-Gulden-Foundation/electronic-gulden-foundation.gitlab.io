@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { Component, Vue } from 'vue-property-decorator'
 
-export const TICKER_URL = 'https://85.214.137.225/efl/s_poll2.php'
+export const TICKER_URL = 'https://a1.efl.nl/efl/s_poll2.php'
 
 export interface TickerInfo {
   symbol: string

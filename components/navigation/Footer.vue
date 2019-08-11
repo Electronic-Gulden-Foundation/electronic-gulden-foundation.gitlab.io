@@ -17,6 +17,16 @@
 					</ul>
 				</b-col>
 			</b-row>
+
+			<b-row>
+				<b-col class="text-center small">
+					&copy; {{ $t('footer.copyRightText') }}
+					-
+					<a href="https://gitlab.com/electronic-gulden-foundation/electronic-gulden-foundation.gitlab.io/" target="_blank">
+						{{ $t('footer.helpImproveWebsite') }}
+					</a>
+				</b-col>
+			</b-row>
 		</b-container>
 	</footer>
 </template>
@@ -43,7 +53,7 @@ export default Footer
 
 <style lang="scss" scoped>
 footer {
-	background-color: #0b2e13;
+	background-color: #353535;
 	width: 100%;
 	padding: 25px;
 	color: #fff;
