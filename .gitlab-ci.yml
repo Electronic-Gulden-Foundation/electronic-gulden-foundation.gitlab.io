@@ -1,3 +1,6 @@
+include:
+	template: Dependency-Scanning.gitlab-ci.yml
+
 image: node
 
 before_script:
@@ -15,3 +18,4 @@ pages:
       - public
   only:
     - master
+
