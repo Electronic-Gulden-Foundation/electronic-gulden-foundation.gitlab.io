@@ -10,7 +10,7 @@
       class="social-media text-center"
       :class="item.class"
     >
-      <a :href="item.href">
+      <a :href="item.href" target="_blank">
         <div class="icon-wrapper d-block d-sm-inline">
           <fa
             class="icon"
@@ -26,34 +26,11 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import {
-  faFacebookSquare,
-  faReddit,
-  faTwitter
-} from '~/node_modules/@fortawesome/free-brands-svg-icons'
+
 
 @Component
 class FrontPageSocialMedia extends Vue {
-  socialMediaItems = [
-    {
-      name: 'socialMedia.facebook',
-      icon: faFacebookSquare,
-      class: ['facebook'],
-      href: 'https://www.facebook.com/EFLFoundation/'
-    },
-    {
-      name: 'socialMedia.twitter',
-      icon: faTwitter,
-      class: ['twitter'],
-      href: 'https://twitter.com/ElecGulden'
-    },
-    {
-      name: 'socialMedia.reddit',
-      icon: faReddit,
-      class: ['reddit'],
-      href: 'https://www.reddit.com/r/eflfoundation'
-    }
-  ]
+  socialMediaItems = require('~/data/social-media').default
 }
 
 export default FrontPageSocialMedia;

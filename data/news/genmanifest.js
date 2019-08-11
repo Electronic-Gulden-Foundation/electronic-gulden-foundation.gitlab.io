@@ -17,7 +17,7 @@ var news = fs
     }
   })
 
-var manifestFile = __dirname + '/../../assets/newsmanifest.json'
+var manifestFile = __dirname + '/../../data/newsmanifest.json'
 
 fs.writeFileSync(manifestFile, JSON.stringify(news))
 

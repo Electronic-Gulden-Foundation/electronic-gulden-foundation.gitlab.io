@@ -19,18 +19,24 @@
     <b-row>
       <nuxt />
     </b-row>
+
+		<b-row>
+			<footer-component class="mt-5" />
+		</b-row>
   </b-container>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
 
-import TopMenu from '~/components/navigation/TopMenu.vue'
 import BackgroundImage from '~/assets/img/backgrounds/mill.png'
+import Footer from '~/components/navigation/Footer.vue'
+import TopMenu from '~/components/navigation/TopMenu.vue'
 
 @Component({
   components: {
-    TopMenu
+    TopMenu,
+		footerComponent: Footer
   }
 })
 class Default extends Vue {

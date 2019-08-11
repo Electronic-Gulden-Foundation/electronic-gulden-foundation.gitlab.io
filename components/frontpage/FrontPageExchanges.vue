@@ -22,7 +22,7 @@
             >
           </div>
           <div>
-            <span class="exchange-name">{{ exchange.name }}</span>
+            <span class="exchange-name">{{ $t(exchange.name) }}</span>
           </div>
         </a>
       </div>
@@ -35,23 +35,7 @@ import { Component, Vue } from 'vue-property-decorator'
 
 @Component
 class FrontPageExchanges extends Vue {
-  exchanges = [
-    {
-      name: 'Altilly',
-      href: 'https://www.altilly.com/market/EFL_BTC',
-      image: 'https://pbs.twimg.com/profile_images/1069218760509145090/-oNvv4Hj_400x400.jpg'
-    },
-    {
-      name: 'Novaexchange',
-      href: 'https://novaexchange.com/market/BTC_EFL/',
-      image: 'https://pbs.twimg.com/profile_images/1045596482513055747/ozE-hjtP_400x400.jpg'
-    },
-    {
-      name: 'Altmarkets.io',
-      href: 'https://altmarkets.io/trading/eflbtc',
-      image: 'https://pbs.twimg.com/profile_images/1092886025301618690/Xj-S4aBj_400x400.jpg'
-    }
-  ]
+  exchanges = require('~/data/exchanges').default
 }
 
 export default FrontPageExchanges
@@ -75,7 +59,8 @@ export default FrontPageExchanges
     text-align: center;
 
     img {
-      width: 125px;
+			padding: 15px;
+			height: 115px;
     }
   }
 </style>

@@ -12,7 +12,11 @@ export const messages = {
     }
   },
   exchanges: {
-    title: 'Handelen'
+    title: 'Handelen',
+    footerTitle: 'Handelen',
+    guldentrader: 'Guldentrader',
+    altilly: 'Altilly',
+    novaexchange: 'Novaexchange'
   },
   ticker: {
     symbol: 'Symbol',
@@ -22,11 +26,13 @@ export const messages = {
     dayVolumeEur: 'Volume (24h)'
   },
   socialMedia: {
+    forum: 'Forum',
     facebook: 'Facebook',
     reddit: 'Reddit',
     talkWithUs: 'Praat met ons via social media',
     twitter: 'Twitter',
-    youtube: 'Youtube'
+    youtube: 'Youtube',
+    footerTitle: 'Social Media'
   },
   missionStatement: {
     title: 'Het doel van de e-Gulden',
