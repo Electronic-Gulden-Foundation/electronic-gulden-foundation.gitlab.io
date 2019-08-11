@@ -26,7 +26,7 @@
 import { Component, Vue } from 'vue-property-decorator'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
-import { getAllNewsItems } from '~/locales/news/index.ts'
+import { getAllNewsItems } from '~/data/news/index.ts'
 
 @Component
 class News extends Vue {
