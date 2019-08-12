@@ -50,7 +50,7 @@
 
               <div>
                 <b-btn
-                  href="https://e-gulden.org"
+                  href="https://e-gulden.org/index.php/de-egulden"
                   variant="outline-primary"
                   size="lg"
                 >
