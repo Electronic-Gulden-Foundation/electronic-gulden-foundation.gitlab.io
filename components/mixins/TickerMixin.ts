@@ -22,8 +22,8 @@ class TickerMixin extends Vue {
         symbol: 'EFL',
         priceBtc: data.elfprijs_btc,
         priceEur: data.elfprijs_eu,
-        marketCapEur: 0,
-        dayVolumeEur: 0
+        marketCapEur: data.eur_market_cap,
+        dayVolumeEur: data.eur_24h_vol
       }
     } catch (e) {
       console.error(e)
