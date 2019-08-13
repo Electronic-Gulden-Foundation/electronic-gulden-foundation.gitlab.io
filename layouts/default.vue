@@ -20,9 +20,9 @@
       <nuxt />
     </b-row>
 
-		<b-row>
-			<footer-component class="mt-5" />
-		</b-row>
+    <b-row>
+      <footer-component class="mt-5" />
+    </b-row>
   </b-container>
 </template>
 

@@ -10,7 +10,10 @@
       class="social-media text-center"
       :class="item.class"
     >
-      <a :href="item.href" target="_blank">
+      <a
+        :href="item.href"
+        target="_blank"
+      >
         <div class="icon-wrapper d-block d-sm-inline">
           <fa
             class="icon"

@@ -1,50 +1,59 @@
 <template>
-	<footer>
-		<b-container>
-			<b-row>
-				<b-col cols="4">
-					<h4 class="footer-title">
-						{{ $t('footer.foundation.title') }}
-					</h4>
+  <footer>
+    <b-container>
+      <b-row>
+        <b-col cols="4">
+          <h4 class="footer-title">
+            {{ $t('footer.foundation.title') }}
+          </h4>
 
-					<p>{{ $t('footer.foundation.kvk') }}</p>
-					<p>{{ $t('footer.foundation.contact') }}</p>
-				</b-col>
+          <p>{{ $t('footer.foundation.kvk') }}</p>
+          <p>{{ $t('footer.foundation.contact') }}</p>
+        </b-col>
 
-				<b-col>
-					<div class="link-wrapper">
-						<div
-							v-for="footerItem in footerItems"
-							:key="footerItem.title"
-							class="link-group"
-						>
-							<h4 class="footer-title">
-								{{ $t(footerItem.title) }}
-							</h4>
+        <b-col>
+          <div class="link-wrapper">
+            <div
+              v-for="footerItem in footerItems"
+              :key="footerItem.title"
+              class="link-group"
+            >
+              <h4 class="footer-title">
+                {{ $t(footerItem.title) }}
+              </h4>
 
-							<ul>
-								<li v-for="item in footerItem.items" :key="item.name">
-									<a :href="item.href" target="_blank">
-										{{ $t(item.name) }}
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</b-col>
-			</b-row>
+              <ul>
+                <li
+                  v-for="item in footerItem.items"
+                  :key="item.name"
+                >
+                  <a
+                    :href="item.href"
+                    target="_blank"
+                  >
+                    {{ $t(item.name) }}
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </b-col>
+      </b-row>
 
-			<b-row>
-				<b-col class="text-center small">
-					&copy; {{ $t('footer.copyRightText') }}
-					-
-					<a href="https://gitlab.com/electronic-gulden-foundation/electronic-gulden-foundation.gitlab.io/" target="_blank">
-						{{ $t('footer.helpImproveWebsite') }}
-					</a>
-				</b-col>
-			</b-row>
-		</b-container>
-	</footer>
+      <b-row>
+        <b-col class="text-center small">
+          &copy; {{ $t('footer.copyRightText') }}
+          -
+          <a
+            href="https://gitlab.com/electronic-gulden-foundation/electronic-gulden-foundation.gitlab.io/"
+            target="_blank"
+          >
+            {{ $t('footer.helpImproveWebsite') }}
+          </a>
+        </b-col>
+      </b-row>
+    </b-container>
+  </footer>
 </template>
 
 <script lang="ts">
