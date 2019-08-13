@@ -13,14 +13,24 @@ export const messages = {
   },
   exchanges: {
     title: 'Handelen',
-    footerTitle: 'Handelen',
     guldentrader: 'Guldentrader',
     altilly: 'Altilly',
     novaexchange: 'Novaexchange'
   },
   footer: {
+    blockexplorers: 'Block Explorers',
     copyRightText: 'De e-Gulden Community',
-    helpImproveWebsite: 'Help mee deze website te verbeteren'
+    exchanges: 'Handelen',
+    helpImproveWebsite: 'Help mee deze website te verbeteren',
+    onlineWallets: 'Online Wallets',
+    pools: 'Mining Pools',
+    socialMedia: 'Social Media',
+    foundation: {
+      title: 'De Foundation',
+      kvk:
+        'De Electronic Gulden Foundation is geregistreerd bij de kamer van koophandel onder nummer 61016764',
+      contact: 'Neem contact op: support@egulden.org'
+    }
   },
   ticker: {
     symbol: 'Symbol',
@@ -35,8 +45,7 @@ export const messages = {
     reddit: 'Reddit',
     talkWithUs: 'Praat met ons via social media',
     twitter: 'Twitter',
-    youtube: 'Youtube',
-    footerTitle: 'Social Media'
+    youtube: 'Youtube'
   },
   missionStatement: {
     title: 'Het doel van de e-Gulden',

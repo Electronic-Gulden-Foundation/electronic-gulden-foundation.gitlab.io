@@ -1,4 +1,4 @@
-import NewsJson from '~/data/newsmanifest.json'
+import NewsJson from './newsmanifest.json'
 
 export interface NewsItem {
   date: Date

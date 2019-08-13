@@ -5,9 +5,9 @@
   "author": "Electronic Gulden Foundation <support@egulden.org>",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
+    "dev": "npm run generate-news-manifest && nuxt",
+    "build": "npm run generate-news-manifest && nuxt build",
+    "start": "npm run generate-news-manifest && nuxt start",
     "generate-news-manifest": "node ./data/news/genmanifest.js",
     "generate": "npm run generate-news-manifest && nuxt generate",
     "lint": "eslint --ext .ts,.js,.vue --ignore-path .gitignore .",
