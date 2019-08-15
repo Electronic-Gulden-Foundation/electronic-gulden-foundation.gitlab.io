@@ -2,6 +2,7 @@
   <b-carousel
     id="mission-statements-carousel"
     class="mission-statements"
+		:interval="10000"
     controls
     indicators
   >
