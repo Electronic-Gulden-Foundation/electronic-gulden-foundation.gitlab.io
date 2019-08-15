@@ -153,7 +153,7 @@ import FrontPageWalletDownload from '~/components/frontpage/FrontPageWalletDownl
 import MissionStatement from '~/components/frontpage/MissionStatement.vue'
 import News from '~/components/frontpage/News.vue'
 
-import Laptop from '~/assets/img/laptop.png'
+import Laptop from '~/assets/img/laptop-white-bg.png'
 
 @Component({
   components: {
