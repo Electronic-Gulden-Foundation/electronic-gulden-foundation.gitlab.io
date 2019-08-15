@@ -1,33 +1,53 @@
 import {
   faFacebookSquare,
   faReddit,
-  faTwitter
-} from '~/node_modules/@fortawesome/free-brands-svg-icons'
+  faTwitter,
+  IconDefinition
+} from '@fortawesome/free-brands-svg-icons'
 import { faComments } from '~/node_modules/@fortawesome/free-solid-svg-icons'
+import LinkItem from '~/data/LinkItem'
 
-export default [
+export interface SocialMediaItem extends LinkItem {
+  icon: IconDefinition
+  frontPage: boolean
+}
+
+const items: SocialMediaItem[] = [
   {
-    name: 'socialMedia.forum',
+    name: 'Forum',
     icon: faComments,
     class: ['forum'],
-    href: 'https://forum.e-gulden.org/'
+    href: 'https://forum.e-gulden.org/',
+    frontPage: true
   },
   {
-    name: 'socialMedia.facebook',
+    name: 'BitcoinTalk Thread',
+    icon: faComments,
+    class: ['forum'],
+    href: 'https://bitcointalk.org/index.php?topic=843017',
+    frontPage: false
+  },
+  {
+    name: 'Facebook',
     icon: faFacebookSquare,
     class: ['facebook'],
-    href: 'https://www.facebook.com/EFLFoundation/'
+    href: 'https://www.facebook.com/EFLFoundation/',
+    frontPage: true
   },
   {
-    name: 'socialMedia.twitter',
+    name: 'Twitter',
     icon: faTwitter,
     class: ['twitter'],
-    href: 'https://twitter.com/ElecGulden'
+    href: 'https://twitter.com/ElecGulden',
+    frontPage: true
   },
   {
-    name: 'socialMedia.reddit',
+    name: 'Reddit',
     icon: faReddit,
     class: ['reddit'],
-    href: 'https://www.reddit.com/r/eflfoundation'
+    href: 'https://www.reddit.com/r/eflfoundation',
+    frontPage: true
   }
 ]
+
+export default items

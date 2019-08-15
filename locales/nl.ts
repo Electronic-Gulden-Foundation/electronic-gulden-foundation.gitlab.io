@@ -12,10 +12,7 @@ export const messages = {
     }
   },
   exchanges: {
-    title: 'Handelen',
-    guldentrader: 'Guldentrader',
-    altilly: 'Altilly',
-    novaexchange: 'Novaexchange'
+    title: 'Handelen'
   },
   footer: {
     blockexplorers: 'Block Explorers',
@@ -40,12 +37,7 @@ export const messages = {
     dayVolumeEur: 'Volume (24h)'
   },
   socialMedia: {
-    forum: 'Forum',
-    facebook: 'Facebook',
-    reddit: 'Reddit',
-    talkWithUs: 'Praat met ons via social media',
-    twitter: 'Twitter',
-    youtube: 'Youtube'
+    talkWithUs: 'Praat met ons via social media'
   },
   missionStatement: {
     title: 'Het doel van de e-Gulden',

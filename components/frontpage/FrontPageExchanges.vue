@@ -22,7 +22,7 @@
             >
           </div>
           <div>
-            <span class="exchange-name">{{ $t(exchange.name) }}</span>
+            <span class="exchange-name">{{ exchange.name }}</span>
           </div>
         </a>
       </div>

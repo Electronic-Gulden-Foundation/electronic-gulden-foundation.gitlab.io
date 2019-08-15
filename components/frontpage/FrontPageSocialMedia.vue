@@ -21,7 +21,7 @@
           />
         </div>
 
-        <span class="name">{{ $t(item.name) }}</span>
+        <span class="name">{{ item.name }}</span>
       </a>
     </div>
   </div>
@@ -30,10 +30,12 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
 
+import SocialMediaItems from '~/data/social-media'
+
 
 @Component
 class FrontPageSocialMedia extends Vue {
-  socialMediaItems = require('~/data/social-media').default
+  socialMediaItems = SocialMediaItems.filter(i => i.frontPage)
 }
 
 export default FrontPageSocialMedia;

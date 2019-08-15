@@ -31,7 +31,7 @@
                     :href="item.href"
                     target="_blank"
                   >
-                    {{ $t(item.name) }}
+                    {{ item.name }}
                   </a>
                 </li>
               </ul>
