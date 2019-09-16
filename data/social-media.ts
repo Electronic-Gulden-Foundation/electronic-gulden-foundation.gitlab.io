@@ -38,7 +38,7 @@ const items: SocialMediaItem[] = [
     name: 'Twitter',
     icon: faTwitter,
     class: ['twitter'],
-    href: 'https://twitter.com/ElecGulden',
+    href: 'https://twitter.com/eguldenfoundati',
     frontPage: true
   },
   {
