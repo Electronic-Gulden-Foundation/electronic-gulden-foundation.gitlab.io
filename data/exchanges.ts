@@ -1,7 +1,7 @@
 export default [
   {
     name: 'Guldentrader',
-    href: 'https://exchange.guldentrader.com/markets',
+    href: 'https://exchange.guldentrader.com/markets/preview/EUR-EFL',
     image: 'https://exchange.guldentrader.com/images/GT_logofinal1.png'
   },
   {
