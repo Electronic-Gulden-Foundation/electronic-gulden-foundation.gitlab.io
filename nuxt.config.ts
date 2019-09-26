@@ -1,7 +1,9 @@
-import NuxtConfiguration from '@nuxt/config'
+import { Configuration } from '@nuxt/types'
 
-const config: NuxtConfiguration = {
+const config: Configuration = {
   mode: 'universal',
+
+  buildModules: ['@nuxt/typescript-build'],
 
   /**
    *  Customize the progress-bar color
