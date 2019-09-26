@@ -1,4 +1,5 @@
 import {
+  faDiscord,
   faFacebookSquare,
   faReddit,
   faTwitter,
@@ -46,6 +47,13 @@ const items: SocialMediaItem[] = [
     icon: faReddit,
     class: ['reddit'],
     href: 'https://www.reddit.com/r/eflfoundation',
+    frontPage: true
+  },
+  {
+    name: 'Discord',
+    icon: faDiscord,
+    class: ['discord'],
+    href: 'https://discord.gg/WPFjR8B',
     frontPage: true
   }
 ]

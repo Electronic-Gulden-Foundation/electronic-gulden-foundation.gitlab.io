@@ -86,6 +86,9 @@ export default FrontPageSocialMedia;
     &.reddit .icon {
       color: #ff4500;
     }
+		&.discord .icon {
+			color: #7289da;
+		}
   }
 }
 </style>
