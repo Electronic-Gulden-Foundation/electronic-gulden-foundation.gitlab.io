@@ -16,7 +16,7 @@ export const messages = {
   },
   footer: {
     blockexplorers: 'Block Explorers',
-    copyRightText: 'De e-Gulden Community',
+    copyRightText: 'De eGulden Community',
     exchanges: 'Handelen',
     helpImproveWebsite: 'Help mee deze website te verbeteren',
     onlineWallets: 'Online Wallets',
@@ -40,7 +40,7 @@ export const messages = {
     talkWithUs: 'Praat met ons via social media'
   },
   missionStatement: {
-    title: 'Het doel van de e-Gulden',
+    title: 'Het doel van de eGulden',
     statements: [
       {
         title: 'Nederlands geld voor de toekomst',
