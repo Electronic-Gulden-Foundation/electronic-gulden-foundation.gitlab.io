@@ -99,11 +99,11 @@
         </b-row>
 
         <b-row class="row-margin">
-          <b-col>
+          <b-col cols="12" md="6">
             <mission-statement />
           </b-col>
 
-          <b-col>
+          <b-col cols="12" md="6">
             <news />
           </b-col>
         </b-row>

@@ -2,7 +2,7 @@
   <footer>
     <b-container>
       <b-row>
-        <b-col cols="4">
+        <b-col cols="12" md="4">
           <h4 class="footer-title">
             {{ $t('footer.foundation.title') }}
           </h4>
