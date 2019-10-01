@@ -37,7 +37,12 @@ import TopMenu from '~/components/navigation/TopMenu.vue'
   components: {
     TopMenu,
 		footerComponent: Footer
-  }
+  },
+	head (this: Default) {
+    return {
+      titleTemplate: this.$t('layouts.default.head.titleTemplate').toString()
+    }
+	}
 })
 class Default extends Vue {
   backgroundImageStyles = {

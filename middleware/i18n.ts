@@ -8,7 +8,7 @@ export default function({
   params,
   error,
   redirect
-}: any) {
+}): any {
   const defaultLocale = app.i18n.fallbackLocale
 
   if (isHMR) return

@@ -1,6 +1,16 @@
 export const messages = {
+  layouts: {
+    default: {
+      head: {
+        titleTemplate: '%s - eGulden'
+      }
+    }
+  },
   pages: {
     index: {
+      head: {
+        title: 'Het nieuwe Nederlandse geld'
+      },
       title: 'Het nieuwe <b>Nederlandse</b> geld',
       subtitle: 'uw financiële vrijheid!',
       laptopText: 'Citaat van een leuk artikel voor een goede eerste indruk.',

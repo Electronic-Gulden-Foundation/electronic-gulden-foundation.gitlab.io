@@ -5,7 +5,7 @@ import * as nl from '~/locales/nl'
 
 Vue.use(VueI18n)
 
-export default ({ app, store }: any) => {
+export default ({ app, store }): void => {
   const i18nState = store.state.i18n
 
   app.i18n = new VueI18n({
@@ -19,7 +19,7 @@ export default ({ app, store }: any) => {
     }
   })
 
-  app.i18n.path = (link: string) => {
+  app.i18n.path = (link: string): string => {
     if (app.i18n.locale === app.i18n.fallbackLocale) {
       return `/${link}`
     }

@@ -1,14 +1,14 @@
-var fs = require('fs')
+const fs = require('fs')
 
-var news = fs
+const news = fs
   .readdirSync(__dirname)
   .filter(filename => filename.endsWith('.md'))
   .filter(filename => filename.includes('_'))
   .map(filename => {
-    var split = filename.replace(/\.md$/, '').split('_')
-    var date = split[0]
-    var title = split[1]
-    var text = fs.readFileSync(__dirname + '/' + filename).toString()
+    const split = filename.replace(/\.md$/, '').split('_')
+    const date = split[0]
+    const title = split[1]
+    const text = fs.readFileSync(__dirname + '/' + filename).toString()
 
     return {
       title: title,
@@ -17,7 +17,7 @@ var news = fs
     }
   })
 
-var manifestFile = __dirname + '/newsmanifest.json'
+const manifestFile = __dirname + '/newsmanifest.json'
 
 fs.writeFileSync(manifestFile, JSON.stringify(news))
 

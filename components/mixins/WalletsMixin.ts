@@ -10,9 +10,9 @@ import { faFileArchive } from '@fortawesome/free-solid-svg-icons'
 
 @Component
 class WalletsMixin extends Vue {
-  baseUrl: string =
+  baseUrl =
     'https://github.com/Electronic-Gulden-Foundation/egulden/releases/download'
-  version: string = 'v1.4.3.2'
+  version = 'v1.4.3.2'
 
   walletVersions = {
     'Windows 64-bits': {
@@ -62,7 +62,7 @@ class WalletsMixin extends Vue {
     }
   }
 
-  public get bestMatchingWalletVersion() {
+  public get bestMatchingWalletVersion(): object {
     // @ts-ignore
     if (!process.browser) {
       return {}
@@ -71,12 +71,6 @@ class WalletsMixin extends Vue {
     const platform = window.navigator.platform
     const userAgent = window.navigator.userAgent
 
-    const isX64 = userAgent.includes('x64') || userAgent.includes('x86_64')
-    const isX32 =
-      userAgent.includes('x32') ||
-      userAgent.includes('i686') ||
-      userAgent.includes('x86')
-
     if (userAgent.includes('Android')) {
       return this.walletVersions['Android']
     }
@@ -84,6 +78,12 @@ class WalletsMixin extends Vue {
     if (userAgent.includes('iPhone') || userAgent.includes('iPad')) {
       return this.walletVersions['iOS']
     }
+
+    const isX64 = userAgent.includes('x64') || userAgent.includes('x86_64')
+    const isX32 =
+      userAgent.includes('x32') ||
+      userAgent.includes('i686') ||
+      userAgent.includes('x86')
 
     if (platform.includes('Linux')) {
       if (isX64) {

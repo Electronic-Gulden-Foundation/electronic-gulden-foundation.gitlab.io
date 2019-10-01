@@ -99,11 +99,17 @@
         </b-row>
 
         <b-row class="row-margin">
-          <b-col cols="12" md="6">
+          <b-col
+            cols="12"
+            md="6"
+          >
             <mission-statement />
           </b-col>
 
-          <b-col cols="12" md="6">
+          <b-col
+            cols="12"
+            md="6"
+          >
             <news />
           </b-col>
         </b-row>
@@ -164,7 +170,12 @@ import Laptop from '~/assets/img/laptop-white-bg.png'
     FrontPageWalletDownload,
     MissionStatement,
     News
-  }
+  },
+	head (this: Index) {
+    return {
+      title: this.$t('pages.index.head.title').toString()
+		}
+	}
 })
 class Index extends Mixins(WalletsMixin) {
   laptopDisplayStyles = {
