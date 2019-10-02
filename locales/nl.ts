@@ -98,6 +98,7 @@ export const numberFormats = {
   'currency-eur-no-fractions': {
     style: 'currency',
     currency: 'EUR',
+    minimumFractionDigits: 0,
     maximumFractionDigits: 0
   },
   'currency-eur-detailed': {
