@@ -27,7 +27,7 @@
 
             <div class="buttons d-flex justify-content-start">
               <div>
-                <no-ssr>
+                <client-only>
                   <b-btn
                     v-if="bestMatchingWalletVersion"
                     :href="bestMatchingWalletVersion.href"
@@ -38,7 +38,7 @@
                       walletName: bestMatchingWalletVersion.name
                     }) }}
                   </b-btn>
-                </no-ssr>
+                </client-only>
 
                 <a
                   href="#wallet-versions"
