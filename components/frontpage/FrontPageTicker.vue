@@ -19,7 +19,7 @@
 
     <div>
       <dt>{{ $t('ticker.marketCapEur') }}</dt>
-      <dd>{{ tickerInfo && $n(tickerInfo.marketCapEur, 'currency-eur') }}</dd>
+      <dd>{{ tickerInfo && $n(tickerInfo.marketCapEur, 'currency-eur-no-fractions') }}</dd>
     </div>
 
     <div>
