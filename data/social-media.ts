@@ -2,10 +2,11 @@ import {
   faDiscord,
   faFacebookSquare,
   faReddit,
+  faTelegram,
   faTwitter,
   IconDefinition
 } from '@fortawesome/free-brands-svg-icons'
-import { faComments } from '~/node_modules/@fortawesome/free-solid-svg-icons'
+import { faComments } from '@fortawesome/free-solid-svg-icons'
 import LinkItem from '~/data/LinkItem'
 
 export interface SocialMediaItem extends LinkItem {
@@ -54,6 +55,13 @@ const items: SocialMediaItem[] = [
     icon: faDiscord,
     class: ['discord'],
     href: 'https://discord.gg/WPFjR8B',
+    frontPage: true
+  },
+  {
+    name: 'Telegram',
+    icon: faTelegram,
+    class: ['telegram'],
+    href: 'https://t.me/eflfoundation',
     frontPage: true
   }
 ]

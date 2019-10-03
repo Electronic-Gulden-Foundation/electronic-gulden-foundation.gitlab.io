@@ -1,6 +1,6 @@
 <template>
   <div class="social-media-wrapper">
-    <div class="social-media-text d-none d-sm-block">
+    <div class="social-media-text">
       {{ $t('socialMedia.talkWithUs') }}
     </div>
 
@@ -48,7 +48,8 @@ export default FrontPageSocialMedia;
   justify-content: space-between;
   align-items: center;
   color: $gray-500;
-  font-size: 1.4rem;
+  font-size: 1.1rem;
+  flex-wrap: wrap;
 
   > div {
     flex: 1;
@@ -56,12 +57,14 @@ export default FrontPageSocialMedia;
 
   .social-media-text {
     flex: 2;
-    font-size: 1.1rem;
+    font-size: 1.0em;
     text-transform: uppercase;
     font-weight: 600;
   }
 
   .social-media {
+    padding: 10px;
+
     a {
       color: inherit;
       text-decoration: none;
@@ -74,7 +77,7 @@ export default FrontPageSocialMedia;
     .icon {
       vertical-align: middle;
       margin-right: 5px;
-      font-size: 1.8rem;
+      font-size: 1.8em;
     }
 
     &.facebook .icon {
@@ -86,9 +89,24 @@ export default FrontPageSocialMedia;
     &.reddit .icon {
       color: #ff4500;
     }
-		&.discord .icon {
-			color: #7289da;
-		}
+    &.discord .icon {
+      color: #7289da;
+    }
+    &.telegram .icon {
+      color: #0088cc;
+    }
+  }
+}
+
+
+@include media-breakpoint-down(sm) {
+  .social-media-wrapper {
+    .social-media-text {
+      flex: 0 0 100%;
+    }
+    .social-media {
+      flex: 0 0 33%;
+    }
   }
 }
 </style>
