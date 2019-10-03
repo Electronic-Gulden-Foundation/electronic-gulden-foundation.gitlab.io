@@ -98,7 +98,6 @@ export default FrontPageSocialMedia;
   }
 }
 
-
 @include media-breakpoint-down(sm) {
   .social-media-wrapper {
     .social-media-text {

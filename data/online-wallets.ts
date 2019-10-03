@@ -1,6 +1,6 @@
 export default [
   {
-    name: 'efl.nl',
-    href: 'https://efl.nl'
+    name: 'wallet.efl.nl',
+    href: 'https://wallet.efl.nl'
   }
 ]
