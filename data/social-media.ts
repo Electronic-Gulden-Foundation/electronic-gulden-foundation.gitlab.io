@@ -61,7 +61,7 @@ const items: SocialMediaItem[] = [
     name: 'Telegram',
     icon: faTelegram,
     class: ['telegram'],
-    href: 'https://t.me/eflfoundation',
+    href: 'https://t.me/joinchat/K5PBq1fK2nNqKzWPFdA2Kw',
     frontPage: true
   }
 ]
