@@ -9,5 +9,10 @@ export default [
     href: 'https://www.altilly.com/market/EFL_BTC',
     image:
       'https://pbs.twimg.com/profile_images/1069218760509145090/-oNvv4Hj_400x400.jpg'
+  },
+  {
+    name: 'TradecoinX',
+    href: 'https://trade.tradecoinx.ca/trading/eflbtc',
+    image: 'https://pbs.twimg.com/profile_images/1157367764664946691/M2MnRwTI_400x400.jpg'
   }
 ]
