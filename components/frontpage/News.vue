@@ -7,11 +7,11 @@
       :key="index"
     >
       <component
-        :is="news.target === '_blank' ? 'a' : 'nuxt-link'"
+        :is="news.isExternalLink ? 'a' : 'nuxt-link'"
         :to="news.link"
         :href="news.link"
         class="news-item"
-        :target="news.linkTarget"
+        :target="news.isExternalLink ? '_blank' : '_self'"
       >
         <div class="news-title-wrapper">
           {{ news.title }}

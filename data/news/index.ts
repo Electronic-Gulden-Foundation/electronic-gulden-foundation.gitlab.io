@@ -1,26 +1,25 @@
 import NewsJson from './newsmanifest.json'
 
+export interface NewsItem {
+  date: Date
+  title: string
+  path: string
+  link: string
+  isExternalLink: boolean
+}
+
+
 export const getAllNewsItems = (): NewsItem[] => {
   return <any> NewsJson
 }
 
-const indexedBySlug = getAllNewsItems().reduce((map, item) => {
-  map[item.slug] = item
+const indexedByLink = getAllNewsItems().reduce((map, item) => {
+  map[item.link] = item
   return map
 }, {})
 
-export interface NewsItem {
-  date: Date
-  title: string
-  slug: string
-  path: string
-  link: string
-  linkTarget: string
-  isExternalLink: boolean
-}
-
-export const getItemBySlug = (slug: string): NewsItem|undefined => {
-  return indexedBySlug.hasOwnProperty(slug)
-    ? indexedBySlug[slug]
+export const getItemByLink = (link: string): NewsItem|undefined => {
+  return indexedByLink.hasOwnProperty(link)
+    ? indexedByLink[link]
     : undefined
 }

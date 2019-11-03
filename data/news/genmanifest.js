@@ -47,12 +47,10 @@ const news = listRecursive(BASE_NEWS_PATH)
 
     return {
       title,
-      slug,
       date,
       link,
       isExternalLink,
-      path,
-      linkTarget: isExternalLink ? '_self' : 'blank',
+      path
     }
   })
   .sort((a, b) => b.date - a.date)

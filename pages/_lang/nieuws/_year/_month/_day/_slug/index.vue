@@ -17,7 +17,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import { getItemBySlug, NewsItem } from '~/data/news'
+import { getItemByLink, NewsItem } from '~/data/news'
 
 @Component({})
 class Slug extends Vue {
@@ -36,11 +36,13 @@ class Slug extends Vue {
   }
 
   get title() {
-    return this.slug
+    if (this.item === undefined) return undefined
+
+    return this.item.title
   }
 
   get item(): NewsItem|undefined {
-    return getItemBySlug(this.slug)
+    return getItemByLink(this.$route.path)
   }
 
   get year() {
