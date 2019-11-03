@@ -36,19 +36,20 @@ const news = listRecursive(BASE_NEWS_PATH)
     const date = new Date(`${year}-${month}-${day}`)
 
     let link = `/nieuws/${year}/${month}/${day}/${slug}`
-    let linkTarget = '_self'
+    let isExternalLink = false
 
     // Check if the news item should link to another page
     if (text.startsWith('http')) {
       link = text
-      linkTarget = '_blank'
+      isExternalLink = true
     }
 
     return {
       title,
       date,
       link,
-      linkTarget
+      linkTarget: isExternalLink ? '_self' : 'blank',
+      isExternalLink
     }
   })
   .sort((a, b) => b.date - a.date)
@@ -58,5 +59,3 @@ const manifestFile = __dirname + '/newsmanifest.json'
 fs.writeFileSync(manifestFile, JSON.stringify(news))
 
 console.log('Wrote ' + news.length + ' news items to ' + manifestFile)
-
-console.log(news)

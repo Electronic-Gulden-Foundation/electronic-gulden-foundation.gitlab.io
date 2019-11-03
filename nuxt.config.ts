@@ -1,4 +1,5 @@
 import { Configuration } from '@nuxt/types'
+import DynamicRoutes from './data/DynamicRoutes'
 
 const config: Configuration = {
   mode: 'spa',
@@ -14,7 +15,8 @@ const config: Configuration = {
    * Customize the generated output folder
    */
   generate: {
-    dir: 'public'
+    dir: 'public',
+    routes: DynamicRoutes
   },
 
   /**

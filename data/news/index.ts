@@ -5,6 +5,7 @@ export interface NewsItem {
   title: string
   link: string
   linkTarget: string
+  isExternalLink: boolean
 }
 
 export const getAllNewsItems = (): NewsItem[] => {
