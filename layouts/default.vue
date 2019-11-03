@@ -29,7 +29,7 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
 
-import BackgroundImage from '~/assets/img/backgrounds/mill.png'
+import BackgroundImage from '~/assets/img/backgrounds/mill.jpeg'
 import FooterComponent from '~/components/navigation/Footer.vue'
 import TopMenu from '~/components/navigation/TopMenu.vue'
 
