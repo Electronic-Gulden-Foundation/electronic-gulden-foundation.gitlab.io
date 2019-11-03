@@ -1,4 +1,5 @@
 const fs = require('fs')
+const slugify = require('slugify')
 
 const BASE_NEWS_PATH = __dirname + '/items/'
 
@@ -21,8 +22,8 @@ const listRecursive = (dir, fileList, extension) => {
 const news = listRecursive(BASE_NEWS_PATH)
   .filter(filename => filename.endsWith('.md'))
   .map(filename => filename.replace(BASE_NEWS_PATH, ''))
-  .map(fullpath => {
-    const split = fullpath.split('/')
+  .map(path => {
+    const split = path.split('/')
 
     const year = split[0]
     const month = split[1]
@@ -30,9 +31,9 @@ const news = listRecursive(BASE_NEWS_PATH)
     const fileName = split[3]
 
     const fileNameNoExtension = fileName.replace(/\.md$/, '')
-    const text = fs.readFileSync(BASE_NEWS_PATH + fullpath).toString()
+    const text = fs.readFileSync(BASE_NEWS_PATH + path).toString()
     const title = fileNameNoExtension
-    const slug = title
+    const slug = slugify(title).toLowerCase()
     const date = new Date(`${year}-${month}-${day}`)
 
     let link = `/nieuws/${year}/${month}/${day}/${slug}`
@@ -46,10 +47,12 @@ const news = listRecursive(BASE_NEWS_PATH)
 
     return {
       title,
+      slug,
       date,
       link,
+      isExternalLink,
+      path,
       linkTarget: isExternalLink ? '_self' : 'blank',
-      isExternalLink
     }
   })
   .sort((a, b) => b.date - a.date)

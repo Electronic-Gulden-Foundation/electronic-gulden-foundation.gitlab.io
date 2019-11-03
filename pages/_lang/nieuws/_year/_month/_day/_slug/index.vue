@@ -17,28 +17,30 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
+import { getItemBySlug, NewsItem } from '~/data/news'
 
-@Component({
-})
+@Component({})
 class Slug extends Vue {
   get exists() {
-    return this.module !== undefined
+    return this.item && this.contents
   }
 
-  get contents () {
-    return this.module.default
+  get contents(): string|undefined {
+    if (this.item === undefined) return undefined
+
+    try {
+      return require(`~/data/news/items/${this.item.path}`).default
+    } catch (e) {
+      return undefined
+    }
   }
 
   get title() {
     return this.slug
   }
 
-  get module() {
-    try {
-      return require(`~/data/news/items/${this.year}/${this.month}/${this.day}/${this.slug}.md`)
-    } catch (e) {
-      return undefined
-    }
+  get item(): NewsItem|undefined {
+    return getItemBySlug(this.slug)
   }
 
   get year() {
