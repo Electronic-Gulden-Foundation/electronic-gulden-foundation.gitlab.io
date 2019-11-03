@@ -36,7 +36,7 @@ const news = listRecursive(BASE_NEWS_PATH)
     const slug = slugify(title).toLowerCase()
     const date = new Date(`${year}-${month}-${day}`)
 
-    let link = `/nieuws/${year}/${month}/${day}/${slug}`
+    let link = `/nieuws/${year}/${month}/${day}/${slug}/`
     let isExternalLink = false
 
     // Check if the news item should link to another page
