@@ -1,7 +1,7 @@
 import { Configuration } from '@nuxt/types'
 
 const config: Configuration = {
-  mode: 'spa',
+  mode: 'universal',
 
   buildModules: ['@nuxt/typescript-build'],
 
@@ -81,7 +81,7 @@ const config: Configuration = {
     title: 'De Nederlandse Cryptocurrency',
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no' },
       {
         hid: 'description',
         name: 'description',
