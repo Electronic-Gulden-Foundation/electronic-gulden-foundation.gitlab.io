@@ -6,10 +6,12 @@
       v-for="(news, index) in news"
       :key="index"
     >
-      <a
-        :href="news.text"
+      <component
+        :is="news.target === '_blank' ? 'a' : 'nuxt-link'"
+        :to="news.link"
+        :href="news.link"
         class="news-item"
-        target="_blank"
+        :target="news.linkTarget"
       >
         <div class="news-title-wrapper">
           {{ news.title }}
@@ -17,7 +19,7 @@
         <div class="news-icon-wrapper">
           <fa :icon="goToNewsIcon" />
         </div>
-      </a>
+      </component>
     </div>
   </div>
 </template>

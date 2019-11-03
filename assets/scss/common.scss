@@ -5,6 +5,11 @@
 
 @import 'source-sans-pro/source-sans-pro.css';
 
+body {
+  overflow-x: hidden;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
 .btn {
   &.btn-primary {
     color: #fff;

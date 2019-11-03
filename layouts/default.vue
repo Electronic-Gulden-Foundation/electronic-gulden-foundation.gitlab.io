@@ -30,13 +30,13 @@
 import { Component, Vue } from 'vue-property-decorator'
 
 import BackgroundImage from '~/assets/img/backgrounds/mill.png'
-import Footer from '~/components/navigation/Footer.vue'
+import FooterComponent from '~/components/navigation/Footer.vue'
 import TopMenu from '~/components/navigation/TopMenu.vue'
 
 @Component({
   components: {
     TopMenu,
-		footerComponent: Footer
+		FooterComponent
   },
 	head (this: Default) {
     return {
@@ -54,11 +54,6 @@ export default Default
 </script>
 
 <style lang="scss">
-body {
-  overflow-x: hidden;
-  font-family: 'Source Sans Pro', sans-serif;
-}
-
 .background-image-container {
   position: absolute;
 
