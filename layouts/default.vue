@@ -2,10 +2,7 @@
   <b-container fluid>
     <div class="background-image-container">
       <div class="background-image-wrapper">
-        <div
-          class="background-image"
-          :style="backgroundImageStyles"
-        />
+        <div class="background-image" />
         <div class="background-image-overlay" />
       </div>
     </div>
@@ -29,7 +26,6 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
 
-import BackgroundImage from '~/assets/img/backgrounds/mill.jpeg'
 import FooterComponent from '~/components/navigation/Footer.vue'
 import TopMenu from '~/components/navigation/TopMenu.vue'
 
@@ -44,11 +40,7 @@ import TopMenu from '~/components/navigation/TopMenu.vue'
     }
 	}
 })
-class Default extends Vue {
-  backgroundImageStyles = {
-    backgroundImage: `url(${BackgroundImage})`
-  }
-}
+class Default extends Vue {}
 
 export default Default
 </script>
@@ -81,6 +73,7 @@ export default Default
     }
 
     .background-image {
+      background-image: url('~assets/img/backgrounds/mill.jpeg');
       background-repeat: no-repeat;
       background-size: cover;
       background-position-y: 50px;

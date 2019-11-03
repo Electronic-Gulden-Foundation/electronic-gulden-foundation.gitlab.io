@@ -105,6 +105,10 @@ const config: Configuration = {
 
   markdownit: {
     injected: true
+  },
+
+  build: {
+    extractCSS: true
   }
 }
 
