@@ -28,5 +28,7 @@ Ik steek mijn geld in crypto en goederen. Je moet handelen! Crypto biedt daartoe
 Laat het eens op u inwerken welke kracht Bitcoin en andere munten dan hebben.
 
 Overweeg eens u hierin te verdiepen. Niet voor mij, maar voor uzelf.
-Laurens van den Berg
-3 november 2019
+
+Laurens van den Berg<br />
+3 november 2019<br />
+EFL-adres van Laurens: LbySot5ML3hNXwaLTdZA9BoeByvfBVfHgb
