@@ -19,7 +19,13 @@
 import { Component, Vue } from 'vue-property-decorator'
 import { getItemByLink, NewsItem } from '~/data/news'
 
-@Component({})
+@Component({
+  head (this: Slug) {
+    return {
+      title: this.title
+    }
+  }
+})
 class Slug extends Vue {
   get exists() {
     return this.item && this.contents
