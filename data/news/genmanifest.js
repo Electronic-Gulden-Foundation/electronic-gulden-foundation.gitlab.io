@@ -2,6 +2,9 @@ const fs = require('fs')
 const slugify = require('slugify')
 
 const BASE_NEWS_PATH = __dirname + '/items/'
+const SLUGIFY_OPTIONS = {
+  remove: /[*+~.,()'"!:@]/g
+}
 
 const listRecursive = (dir, fileList, extension) => {
   fileList = fileList || []
@@ -33,7 +36,7 @@ const news = listRecursive(BASE_NEWS_PATH)
     const fileNameNoExtension = fileName.replace(/\.md$/, '')
     const text = fs.readFileSync(BASE_NEWS_PATH + path).toString()
     const title = fileNameNoExtension
-    const slug = slugify(title).toLowerCase()
+    const slug = slugify(title.toLowerCase(), SLUGIFY_OPTIONS)
     const date = new Date(`${year}-${month}-${day}`)
 
     let link = `/nieuws/${year}/${month}/${day}/${slug}/`

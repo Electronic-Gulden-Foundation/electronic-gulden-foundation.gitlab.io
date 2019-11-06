@@ -1,5 +1,3 @@
-Cryptocurrency en crisis
-
 Als er twee dingen nauw verbonden zijn, dan zijn het wel crypto en crisis. In het euforische
 economische klimaat waar we ons nu bevinden, lijkt dat wellicht niet zo, maar niets is minder waar.
 Bitcoin is ​letterlijk​ ontstaan bij het ontstaan van de crisis van 2008.
