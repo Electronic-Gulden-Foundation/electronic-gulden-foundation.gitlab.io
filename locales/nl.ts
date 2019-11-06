@@ -86,7 +86,7 @@ export const messages = {
     title: 'Download je portemonnee'
   },
   recentNews: {
-    title: 'Laatste nieuws'
+    title: 'Blog'
   }
 }
 
