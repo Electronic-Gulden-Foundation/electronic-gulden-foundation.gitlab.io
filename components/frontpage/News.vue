@@ -37,7 +37,6 @@ const NEWS_ITEM_LIMIT = 5
 class News extends Vue {
 	goToNewsIcon = faArrowRight
   news = getAllNewsItems()
-  limitNewsItems = 5
 
   get allNews(): NewsItem[] {
 	  return this.news.splice(0, NEWS_ITEM_LIMIT)
