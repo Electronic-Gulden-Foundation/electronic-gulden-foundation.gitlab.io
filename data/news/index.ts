@@ -10,7 +10,7 @@ export interface NewsItem {
 
 
 export const getAllNewsItems = (): NewsItem[] => {
-  return <any> NewsJson
+  return <any[]> NewsJson
 }
 
 const indexedByLink = getAllNewsItems().reduce((map, item) => {

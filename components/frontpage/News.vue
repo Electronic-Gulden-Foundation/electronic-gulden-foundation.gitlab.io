@@ -3,14 +3,15 @@
     <h2>{{ $t('recentNews.title') }}</h2>
 
     <div
-      v-for="(news, index) in news"
-      :key="index"
+      v-for="(news, index) in allNews"
+      :key="news.slug"
     >
       <component
         :is="news.isExternalLink ? 'a' : 'nuxt-link'"
         :to="news.link"
         :href="news.link"
         class="news-item"
+        :class="{ 'last': index === allNews.length - 1 }"
         :target="news.isExternalLink ? '_blank' : '_self'"
       >
         <div class="news-title-wrapper">
@@ -28,12 +29,19 @@
 import { Component, Vue } from 'vue-property-decorator'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
-import { getAllNewsItems } from '~/data/news'
+import { getAllNewsItems, NewsItem } from '~/data/news'
+
+const NEWS_ITEM_LIMIT = 5
 
 @Component
 class News extends Vue {
 	goToNewsIcon = faArrowRight
   news = getAllNewsItems()
+  limitNewsItems = 5
+
+  get allNews(): NewsItem[] {
+	  return this.news.splice(0, NEWS_ITEM_LIMIT)
+  }
 }
 
 export default News
@@ -49,6 +57,10 @@ export default News
 		border-bottom: 1px solid $gray-400;
 		padding: 15px 0;
 		font-size: 1.2rem;
+
+    &.last {
+      border-bottom: none;
+    }
 	}
 }
 </style>
