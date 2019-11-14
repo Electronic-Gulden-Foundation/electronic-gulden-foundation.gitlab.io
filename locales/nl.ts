@@ -19,6 +19,10 @@ export const messages = {
         downloadWallet: 'Download voor {walletName}',
         downloadWalletOtherVersions: 'Andere versies'
       }
+    },
+    news: {
+      share: 'Dit artikel delen',
+      notFound: 'Item niet gevonden :('
     }
   },
   exchanges: {

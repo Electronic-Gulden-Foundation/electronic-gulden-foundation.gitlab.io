@@ -69,7 +69,10 @@ const config: Configuration = {
   /**
    *  Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/fontawesome.ts', '~/plugins/i18n.ts'],
+  plugins: [
+    '~/plugins/fontawesome.ts',
+    '~/plugins/i18n.ts'
+  ],
 
   bootstrapVue: {
     bootstrapCSS: false,
