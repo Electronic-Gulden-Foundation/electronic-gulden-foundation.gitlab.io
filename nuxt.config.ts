@@ -71,7 +71,8 @@ const config: Configuration = {
    */
   plugins: [
     '~/plugins/fontawesome.ts',
-    '~/plugins/i18n.ts'
+    '~/plugins/i18n.ts',
+    { src: '~/plugins/vue-matomo.ts', ssr: false }
   ],
 
   bootstrapVue: {
