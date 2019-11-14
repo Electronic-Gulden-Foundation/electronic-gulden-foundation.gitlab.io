@@ -41,7 +41,13 @@ import SocialSharing from 'vue-social-sharing'
 import { Component, Vue } from 'vue-property-decorator'
 import { getItemByLink, NewsItem } from '~/data/news'
 import { faEnvelope } from '~/node_modules/@fortawesome/free-solid-svg-icons'
-import { faFacebook, faLinkedinIn, faTelegram, faTwitter } from '~/node_modules/@fortawesome/free-brands-svg-icons'
+import {
+  faFacebook,
+  faLinkedinIn,
+  faTelegram,
+  faTwitter,
+  faWhatsapp
+} from '~/node_modules/@fortawesome/free-brands-svg-icons'
 
 @Component({
   components: {
@@ -59,7 +65,8 @@ class Slug extends Vue {
     { id: 'facebook', icon: faFacebook },
     { id: 'linkedin', icon: faLinkedinIn },
     { id: 'telegram', icon: faTelegram },
-    { id: 'twitter', icon: faTwitter }
+    { id: 'twitter', icon: faTwitter },
+    { id: 'whatsapp', icon: faWhatsapp }
   ]
 
   get exists() {
