@@ -2,7 +2,7 @@
   <b-container>
     <b-row align-h="center">
       <b-col v-if="exists" cols="12" md="10" xl="8" class="wrapper">
-        <h1 class="mt-4">{{ title }}</h1>
+        <h1 class="title mt-4">{{ title }}</h1>
         <h6 class="date mb-4">{{ day }}-{{ month }}-{{ year }}</h6>
 
         <div class="contents" v-html="contents" />
