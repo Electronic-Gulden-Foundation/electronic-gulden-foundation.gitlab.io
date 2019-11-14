@@ -6,6 +6,10 @@ export const messages = {
       }
     }
   },
+  cookieLaw: {
+    buttonText: 'Accepteren',
+    message: 'Deze website maakt gebruik van cookies'
+  },
   pages: {
     index: {
       head: {

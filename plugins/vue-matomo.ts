@@ -17,7 +17,7 @@ export default ({ app }) => {
 
     // Require consent before sending tracking information to matomo
     // Default: false
-    requireConsent: false,
+    requireConsent: true,
 
     // Whether to track the initial page view
     // Default: true

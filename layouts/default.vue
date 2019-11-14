@@ -20,11 +20,21 @@
     <b-row>
       <footer-component class="mt-5" />
     </b-row>
+
+    <client-only>
+      <cookie-law
+        :button-text="$t('cookieLaw.buttonText')"
+        :message="$t('cookieLaw.message')"
+        buttonClass="btn px-4 py-2 btn-primary"
+        @accept="handleAcceptCookies"
+      />
+    </client-only>
   </b-container>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
+import CookieLaw from 'vue-cookie-law'
 
 import FooterComponent from '~/components/navigation/Footer.vue'
 import TopMenu from '~/components/navigation/TopMenu.vue'
@@ -32,7 +42,8 @@ import TopMenu from '~/components/navigation/TopMenu.vue'
 @Component({
   components: {
     TopMenu,
-		FooterComponent
+		FooterComponent,
+    CookieLaw
   },
 	head (this: Default) {
     return {
@@ -40,7 +51,14 @@ import TopMenu from '~/components/navigation/TopMenu.vue'
     }
 	}
 })
-class Default extends Vue {}
+class Default extends Vue {
+  $matomo!: any|undefined
+
+  handleAcceptCookies() {
+    this.$matomo && this.$matomo.rememberConsentGiven()
+  }
+
+}
 
 export default Default
 </script>
