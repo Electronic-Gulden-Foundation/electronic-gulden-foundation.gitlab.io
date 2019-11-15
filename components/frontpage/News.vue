@@ -29,17 +29,16 @@
 import { Component, Vue } from 'vue-property-decorator'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
-import { getAllNewsItems, NewsItem } from '~/data/news'
+import { getLatestNewsItems, NewsItem } from '~/data/news'
 
 const NEWS_ITEM_LIMIT = 5
 
 @Component
 class News extends Vue {
 	goToNewsIcon = faArrowRight
-  news = getAllNewsItems()
 
   get allNews(): NewsItem[] {
-	  return this.news.splice(0, NEWS_ITEM_LIMIT)
+	  return getLatestNewsItems(NEWS_ITEM_LIMIT)
   }
 }
 

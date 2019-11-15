@@ -57,7 +57,6 @@ class Default extends Vue {
   handleAcceptCookies() {
     this.$matomo && this.$matomo.rememberConsentGiven()
   }
-
 }
 
 export default Default

@@ -10,7 +10,7 @@ export interface NewsItem {
 
 
 export const getAllNewsItems = (): NewsItem[] => {
-  return <any[]> NewsJson
+  return [].concat(<any> NewsJson)
 }
 
 const indexedByLink = getAllNewsItems().reduce((map, item) => {
@@ -22,4 +22,8 @@ export const getItemByLink = (link: string): NewsItem|undefined => {
   return indexedByLink.hasOwnProperty(link)
     ? indexedByLink[link]
     : undefined
+}
+
+export const getLatestNewsItems = (limit: number = 5) => {
+  return getAllNewsItems().splice(0, limit)
 }
