@@ -32,6 +32,46 @@
         <h3>{{ $t('pages.news.notFound') }}</h3>
       </b-col>
     </b-row>
+
+    <b-row class="other-news-items">
+      <b-col class="previous-news-item">
+        <template v-if="previousNewsItem">
+          <component
+            :is="previousNewsItem.isExternalLink ? 'a' : 'nuxt-link'"
+            :to="previousNewsItem.link"
+            :href="previousNewsItem.link"
+            class="news-item"
+            :target="previousNewsItem.isExternalLink ? '_blank' : '_self'"
+          >
+            <div class="news-icon-wrapper">
+              <fa :icon="previousNewsIcon" />
+            </div>
+            <div class="news-title-wrapper">
+              {{ previousNewsItem.title }}
+            </div>
+          </component>
+        </template>
+      </b-col>
+
+      <b-col class="next-news-item">
+        <template v-if="nextNewsItem">
+          <component
+            :is="nextNewsItem.isExternalLink ? 'a' : 'nuxt-link'"
+            :to="nextNewsItem.link"
+            :href="nextNewsItem.link"
+            class="news-item"
+            :target="nextNewsItem.isExternalLink ? '_blank' : '_self'"
+          >
+            <div class="news-title-wrapper">
+              {{ nextNewsItem.title }}
+            </div>
+            <div class="news-icon-wrapper">
+              <fa :icon="nextNewsIcon" />
+            </div>
+          </component>
+        </template>
+      </b-col>
+    </b-row>
   </b-container>
 </template>
 
@@ -39,8 +79,8 @@
 import SocialSharing from 'vue-social-sharing'
 
 import { Component, Vue } from 'vue-property-decorator'
-import { getItemByLink, NewsItem } from '~/data/news'
-import { faEnvelope } from '~/node_modules/@fortawesome/free-solid-svg-icons'
+import { getItemByLink, getNextNewsItem, getPreviousNewsItem, NewsItem } from '~/data/news'
+import { faArrowLeft, faArrowRight, faEnvelope } from '~/node_modules/@fortawesome/free-solid-svg-icons'
 import {
   faFacebook,
   faLinkedinIn,
@@ -68,6 +108,9 @@ class Slug extends Vue {
     { id: 'twitter', icon: faTwitter },
     { id: 'whatsapp', icon: faWhatsapp }
   ]
+
+  nextNewsIcon = faArrowRight
+  previousNewsIcon = faArrowLeft
 
   get exists() {
     return this.item && this.contents
@@ -108,6 +151,14 @@ class Slug extends Vue {
   get slug() {
     return this.$route.params.slug
   }
+
+  get nextNewsItem() {
+    return this.item ? getNextNewsItem(this.item) : undefined
+  }
+
+  get previousNewsItem() {
+    return this.item ? getPreviousNewsItem(this.item) : undefined
+  }
 }
 
 export default Slug
@@ -129,6 +180,28 @@ export default Slug
 
   &:first-child {
     margin-left: 0;
+  }
+}
+
+.other-news-items {
+  margin-top: 25px;
+  padding-top: 25px;
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
+
+  .news-item {
+    display: flex;
+    padding: 15px 0;
+    font-size: 1.2rem;
+    justify-content: space-between;
+    align-items: center;
+
+    .news-icon-wrapper {
+      padding: 0 15px;
+    }
+  }
+
+  .previous-news-item {
+    text-align: right;
   }
 }
 </style>

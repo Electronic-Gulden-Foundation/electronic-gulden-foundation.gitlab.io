@@ -6,17 +6,24 @@ export interface NewsItem {
   path: string
   link: string
   isExternalLink: boolean
+
+  originalIndex: number|undefined
 }
 
+const itemsWithIndex: NewsItem[] = (<any> NewsJson)
+  .map((item: NewsItem, index: number) => {
+    item.originalIndex = index
+    return item
+  })
 
-export const getAllNewsItems = (): NewsItem[] => {
-  return [].concat(<any> NewsJson)
-}
-
-const indexedByLink = getAllNewsItems().reduce((map, item) => {
+const indexedByLink = itemsWithIndex.reduce((map, item) => {
   map[item.link] = item
   return map
 }, {})
+
+export const getAllNewsItems = (): NewsItem[] => {
+  return (<NewsItem[]> []).concat(itemsWithIndex)
+}
 
 export const getItemByLink = (link: string): NewsItem|undefined => {
   return indexedByLink.hasOwnProperty(link)
@@ -26,4 +33,26 @@ export const getItemByLink = (link: string): NewsItem|undefined => {
 
 export const getLatestNewsItems = (limit: number = 5) => {
   return getAllNewsItems().splice(0, limit)
+}
+
+export const getItemByIndex = (index: number): NewsItem|undefined => {
+  const allItems = getAllNewsItems()
+
+  if (index < 0 || index >= allItems.length) {
+    return undefined
+  }
+
+  return allItems[index]
+}
+
+export const getNextNewsItem = (item: NewsItem): NewsItem|undefined => {
+  return (item.originalIndex !== undefined)
+    ? getItemByIndex(item.originalIndex - 1)
+    : undefined
+}
+
+export const getPreviousNewsItem = (item: NewsItem): NewsItem|undefined => {
+  return (item.originalIndex !== undefined)
+    ? getItemByIndex(item.originalIndex + 1)
+    : undefined
 }
