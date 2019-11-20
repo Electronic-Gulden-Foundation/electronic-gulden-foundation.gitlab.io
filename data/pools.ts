@@ -11,12 +11,7 @@ export default [
   },
   {
     name: 'Mining Dutch',
-    href: 'https://www.mining-dutch.nl/',
-    certified: false
-  },
-  {
-    name: 'Zergpool',
-    href: 'https://zergpool.com',
+    href: 'https://www.mining-dutch.nl/pools/egulden.php?page=statistics&action=pool',
     certified: false
   }
 ]
