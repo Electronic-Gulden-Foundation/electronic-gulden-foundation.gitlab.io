@@ -2,17 +2,16 @@ export default [
   {
     name: 'Guldentrader',
     href: 'https://exchange.guldentrader.com/markets/preview/EUR-EFL',
-    image: 'https://exchange.guldentrader.com/images/GT_logofinal1.png'
+    image: require('./guldentrader.png')
   },
   {
     name: 'Altilly',
     href: 'https://www.altilly.com/market/EFL_BTC',
-    image:
-      'https://pbs.twimg.com/profile_images/1069218760509145090/-oNvv4Hj_400x400.jpg'
+    image: require('./altilly.jpg')
   },
   {
     name: 'TradecoinX',
     href: 'https://trade.tradecoinx.ca/trading/eflbtc',
-    image: 'https://pbs.twimg.com/profile_images/1157367764664946691/M2MnRwTI_400x400.jpg'
+    image: require('./tradecoinx.png')
   }
 ]

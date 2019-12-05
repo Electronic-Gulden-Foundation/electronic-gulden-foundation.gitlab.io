@@ -59,8 +59,8 @@ export default FrontPageExchanges
     text-align: center;
 
     img {
-			padding: 15px;
-			height: 115px;
+			padding: 5px;
+			height: 100px;
     }
   }
 </style>
