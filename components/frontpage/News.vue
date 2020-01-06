@@ -31,7 +31,7 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 import { getLatestNewsItems, NewsItem } from '~/data/news'
 
-const NEWS_ITEM_LIMIT = 5
+const NEWS_ITEM_LIMIT = 10
 
 @Component
 class News extends Vue {
