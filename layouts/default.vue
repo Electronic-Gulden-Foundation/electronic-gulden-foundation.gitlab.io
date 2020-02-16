@@ -25,7 +25,7 @@
       <cookie-law
         :button-text="$t('cookieLaw.buttonText')"
         :message="$t('cookieLaw.message')"
-        buttonClass="btn px-4 py-2 btn-primary"
+        button-class="btn px-4 py-2 btn-primary"
         @accept="handleAcceptCookies"
       />
     </client-only>
@@ -42,19 +42,19 @@ import TopMenu from '~/components/navigation/TopMenu.vue'
 @Component({
   components: {
     TopMenu,
-		FooterComponent,
+    FooterComponent,
     CookieLaw
   },
-	head (this: Default) {
+  head (this: Default) {
     return {
       titleTemplate: this.$t('layouts.default.head.titleTemplate').toString()
     }
-	}
+  }
 })
 class Default extends Vue {
   $matomo!: any|undefined
 
-  handleAcceptCookies() {
+  handleAcceptCookies () {
     this.$matomo && this.$matomo.rememberConsentGiven()
   }
 }

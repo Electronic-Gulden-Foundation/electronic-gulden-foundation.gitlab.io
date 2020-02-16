@@ -171,11 +171,11 @@ import Laptop from '~/assets/img/laptop-white-bg.png'
     MissionStatement,
     News
   },
-	head (this: Index) {
+  head (this: Index) {
     return {
       title: this.$t('pages.index.head.title').toString()
-		}
-	}
+    }
+  }
 })
 class Index extends Mixins(WalletsMixin) {
   laptopDisplayStyles = {

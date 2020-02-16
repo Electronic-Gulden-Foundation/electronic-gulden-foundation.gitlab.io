@@ -72,7 +72,7 @@ const config: Configuration = {
   plugins: [
     '~/plugins/fontawesome.ts',
     '~/plugins/i18n.ts',
-    { src: '~/plugins/framebuster.ts', ssr: false},
+    { src: '~/plugins/framebuster.ts', ssr: false },
     { src: '~/plugins/vue-matomo.ts', ssr: false }
   ],
 

@@ -25,7 +25,7 @@ const listRecursive = (dir, fileList, extension) => {
 const news = listRecursive(BASE_NEWS_PATH)
   .filter(filename => filename.endsWith('.md'))
   .map(filename => filename.replace(BASE_NEWS_PATH, ''))
-  .map(path => {
+  .map((path) => {
     const split = path.split('/')
 
     const year = split[0]

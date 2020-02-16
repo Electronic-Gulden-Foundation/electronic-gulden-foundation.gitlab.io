@@ -32,13 +32,12 @@ import { Component, Vue } from 'vue-property-decorator'
 
 import SocialMediaItems from '~/data/social-media'
 
-
 @Component
 class FrontPageSocialMedia extends Vue {
   socialMediaItems = SocialMediaItems.filter(i => i.frontPage)
 }
 
-export default FrontPageSocialMedia;
+export default FrontPageSocialMedia
 </script>
 
 <style lang="scss" scoped>

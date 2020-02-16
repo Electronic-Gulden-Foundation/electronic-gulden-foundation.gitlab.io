@@ -12,6 +12,7 @@ import { faFileArchive } from '@fortawesome/free-solid-svg-icons'
 class WalletsMixin extends Vue {
   baseUrl =
     'https://github.com/Electronic-Gulden-Foundation/egulden/releases/download'
+
   version = 'v1.4.3.2'
 
   walletVersions = {
@@ -62,7 +63,7 @@ class WalletsMixin extends Vue {
     }
   }
 
-  public get bestMatchingWalletVersion(): object {
+  public get bestMatchingWalletVersion (): object {
     // @ts-ignore
     if (!process.browser) {
       return {}
@@ -72,11 +73,11 @@ class WalletsMixin extends Vue {
     const userAgent = window.navigator.userAgent
 
     if (userAgent.includes('Android')) {
-      return this.walletVersions['Android']
+      return this.walletVersions.Android
     }
 
     if (userAgent.includes('iPhone') || userAgent.includes('iPad')) {
-      return this.walletVersions['iOS']
+      return this.walletVersions.iOS
     }
 
     const isX64 = userAgent.includes('x64') || userAgent.includes('x86_64')

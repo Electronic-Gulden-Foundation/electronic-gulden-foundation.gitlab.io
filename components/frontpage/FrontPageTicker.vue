@@ -32,18 +32,18 @@
 </template>
 
 <script lang="ts">
+import { Component, Mixins } from 'vue-property-decorator'
 import TickerMixin, { TickerInfo } from '~/components/mixins/TickerMixin'
-import {Component, Mixins} from 'vue-property-decorator'
 
 @Component
 class FrontpageTicker extends Mixins(TickerMixin) {
   tickerInfo: TickerInfo | null = null
 
-  mounted() {
+  mounted () {
     this.loadTickerInfo()
   }
 
-  async loadTickerInfo() {
+  async loadTickerInfo () {
     this.tickerInfo = await this.getTickerInfo()
   }
 }
