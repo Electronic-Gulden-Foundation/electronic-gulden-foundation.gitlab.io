@@ -35,7 +35,9 @@ const config: Configuration = {
     '@nuxtjs/style-resources',
 
     // Doc: https://github.com/nuxt-community/modules/tree/master/packages/markdownit
-    '@nuxtjs/markdownit'
+    '@nuxtjs/markdownit',
+
+    'vue-scrollto/nuxt'
   ],
 
   /**
