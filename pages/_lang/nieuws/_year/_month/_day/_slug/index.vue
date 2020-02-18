@@ -2,8 +2,12 @@
   <b-container>
     <b-row align-h="center">
       <b-col v-if="exists" cols="12" md="10" xl="8" class="wrapper">
-        <h1 class="title mt-4">{{ title }}</h1>
-        <h6 class="date mb-4">{{ day }}-{{ month }}-{{ year }}</h6>
+        <h1 class="title mt-4">
+          {{ title }}
+        </h1>
+        <h6 class="date mb-4">
+          {{ day }}-{{ month }}-{{ year }}
+        </h6>
 
         <div class="contents" v-html="contents" />
 
@@ -15,9 +19,9 @@
               <div>
                 <network
                   v-for="network in $parent.socialNetworks"
+                  :key="network.id"
                   class="social-sharing-network"
                   :class="network.id"
-                  :key="network.id"
                   :network="network.id"
                 >
                   <fa :icon="network.icon" />
@@ -112,12 +116,12 @@ class Slug extends Vue {
   nextNewsIcon = faArrowRight
   previousNewsIcon = faArrowLeft
 
-  get exists() {
+  get exists () {
     return this.item && this.contents
   }
 
-  get contents(): string|undefined {
-    if (this.item === undefined) return undefined
+  get contents (): string|undefined {
+    if (this.item === undefined) { return undefined }
 
     try {
       return require(`~/data/news/items/${this.item.path}`).default
@@ -126,37 +130,37 @@ class Slug extends Vue {
     }
   }
 
-  get title() {
-    if (this.item === undefined) return undefined
+  get title () {
+    if (this.item === undefined) { return undefined }
 
     return this.item.title
   }
 
-  get item(): NewsItem|undefined {
+  get item (): NewsItem|undefined {
     return getItemByLink(this.$route.path)
   }
 
-  get year() {
+  get year () {
     return this.$route.params.year
   }
 
-  get month() {
+  get month () {
     return this.$route.params.month
   }
 
-  get day() {
+  get day () {
     return this.$route.params.day
   }
 
-  get slug() {
+  get slug () {
     return this.$route.params.slug
   }
 
-  get nextNewsItem() {
+  get nextNewsItem () {
     return this.item ? getNextNewsItem(this.item) : undefined
   }
 
-  get previousNewsItem() {
+  get previousNewsItem () {
     return this.item ? getPreviousNewsItem(this.item) : undefined
   }
 }

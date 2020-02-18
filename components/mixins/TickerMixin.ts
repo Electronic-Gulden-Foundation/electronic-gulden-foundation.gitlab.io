@@ -13,7 +13,7 @@ export interface TickerInfo {
 
 @Component
 class TickerMixin extends Vue {
-  public async getTickerInfo(): Promise<TickerInfo> {
+  public async getTickerInfo (): Promise<TickerInfo> {
     try {
       const response = await axios.get(TICKER_URL)
       const data = response.data

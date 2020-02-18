@@ -25,6 +25,6 @@ export default ({ app }) => {
 
     // Whether or not to log debug information
     // Default: false
-    debug: false,
+    debug: false
   })
 }

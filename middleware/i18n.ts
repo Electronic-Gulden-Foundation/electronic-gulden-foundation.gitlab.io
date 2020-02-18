@@ -1,6 +1,6 @@
 import { types } from '~/store/i18n'
 
-export default function({
+export default function ({
   isHMR,
   app,
   store,
@@ -11,11 +11,11 @@ export default function({
 }): any {
   const defaultLocale = app.i18n.fallbackLocale
 
-  if (isHMR) return
+  if (isHMR) { return }
 
   const locale = params.lang || defaultLocale
   const i18nState = store.state.i18n
-  if (i18nState.locales.indexOf(locale) === -1) {
+  if (!i18nState.locales.includes(locale)) {
     return error({ message: 'This page could not be found', statusCode: 404 })
   }
 

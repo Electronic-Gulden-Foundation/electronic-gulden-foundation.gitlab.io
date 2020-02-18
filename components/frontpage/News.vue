@@ -37,9 +37,9 @@ const NEWS_ITEM_LIMIT = 10
 class News extends Vue {
 	goToNewsIcon = faArrowRight
 
-  get allNews(): NewsItem[] {
+	get allNews (): NewsItem[] {
 	  return getLatestNewsItems(NEWS_ITEM_LIMIT)
-  }
+	}
 }
 
 export default News

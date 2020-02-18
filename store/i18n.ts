@@ -21,13 +21,13 @@ export const getters: GetterTree<State, State> = {
 }
 
 export const actions: ActionTree<State, State> = {
-  setLocale({ commit }, locale) {
+  setLocale ({ commit }, locale) {
     commit(types.SET_LOCALE, locale)
   }
 }
 
 export const mutations: MutationTree<State> = {
-  [types.SET_LOCALE](state: State, locale: string) {
+  [types.SET_LOCALE] (state: State, locale: string) {
     state.locale = locale
   }
 }

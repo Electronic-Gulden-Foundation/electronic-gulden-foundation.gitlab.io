@@ -35,7 +35,9 @@ const config: Configuration = {
     '@nuxtjs/style-resources',
 
     // Doc: https://github.com/nuxt-community/modules/tree/master/packages/markdownit
-    '@nuxtjs/markdownit'
+    '@nuxtjs/markdownit',
+
+    'vue-scrollto/nuxt'
   ],
 
   /**
@@ -72,7 +74,7 @@ const config: Configuration = {
   plugins: [
     '~/plugins/fontawesome.ts',
     '~/plugins/i18n.ts',
-    { src: '~/plugins/framebuster.ts', ssr: false},
+    { src: '~/plugins/framebuster.ts', ssr: false },
     { src: '~/plugins/vue-matomo.ts', ssr: false }
   ],
 
