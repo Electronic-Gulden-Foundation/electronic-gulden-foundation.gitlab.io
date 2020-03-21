@@ -1,16 +1,10 @@
-import {
-  faDiscord,
-  faFacebookSquare,
-  faReddit,
-  faTelegram,
-  faTwitter,
-  IconDefinition
-} from '@fortawesome/free-brands-svg-icons'
+import { IconDefinition } from '@fortawesome/fontawesome-common-types'
+import { faDiscord, faFacebookSquare, faReddit, faTelegram, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faComments } from '@fortawesome/free-solid-svg-icons'
 import LinkItem from '~/data/LinkItem'
 
 export interface SocialMediaItem extends LinkItem {
-  icon: IconDefinition
+  icon: IconDefinition,
   frontPage: boolean
 }
 

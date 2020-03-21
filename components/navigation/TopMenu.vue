@@ -7,18 +7,16 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
+  import { Component, Vue } from 'vue-property-decorator'
 
-import Logo from '~/assets/logo.png'
+  import Logo from '~/assets/logo.png'
 
-@Component({
-  name: 'TopMenu'
-})
-class TopMenu extends Vue {
-  Logo = Logo
-}
-
-export default TopMenu
+  @Component({
+    name: 'TopMenu'
+  })
+  export default class TopMenu extends Vue {
+    Logo = Logo
+  }
 </script>
 
-<style langs="scss" scoped></style>
+<style lang="scss" scoped></style>

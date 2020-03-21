@@ -26,39 +26,39 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
+  import { Component, Vue } from 'vue-property-decorator'
+  import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
-import { getLatestNewsItems, NewsItem } from '~/data/news'
+  import { getLatestNewsItems, NewsItem } from '~/data/news'
 
-const NEWS_ITEM_LIMIT = 10
+  const NEWS_ITEM_LIMIT = 10
 
-@Component
-class News extends Vue {
-	goToNewsIcon = faArrowRight
+  @Component
+  class News extends Vue {
+    goToNewsIcon = faArrowRight
 
-	get allNews (): NewsItem[] {
-	  return getLatestNewsItems(NEWS_ITEM_LIMIT)
-	}
-}
+    get allNews (): NewsItem[] {
+      return getLatestNewsItems(NEWS_ITEM_LIMIT)
+    }
+  }
 
-export default News
+  export default News
 </script>
 
 <style lang="scss" scoped>
-.news-wrapper {
-	padding-top: 25px;
+  .news-wrapper {
+    padding-top: 25px;
 
-	.news-item {
-		display: flex;
-		justify-content: space-between;
-		border-bottom: 1px solid $gray-400;
-		padding: 15px 0;
-		font-size: 1.2rem;
+    .news-item {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid $gray-400;
+      padding: 15px 0;
+      font-size: 1.2rem;
 
-    &.last {
-      border-bottom: none;
+      &.last {
+        border-bottom: none;
+      }
     }
-	}
-}
+  }
 </style>

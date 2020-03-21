@@ -33,11 +33,11 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
-import CookieLaw from 'vue-cookie-law'
+  import { Component, Vue } from 'vue-property-decorator'
+  import CookieLaw from 'vue-cookie-law'
 
-import FooterComponent from '~/components/navigation/Footer.vue'
-import TopMenu from '~/components/navigation/TopMenu.vue'
+  import FooterComponent from '~/components/navigation/Footer.vue'
+  import TopMenu from '~/components/navigation/TopMenu.vue'
 
   @Component({
     components: {
@@ -51,7 +51,7 @@ import TopMenu from '~/components/navigation/TopMenu.vue'
       }
     }
   })
-class Default extends Vue {
+  class Default extends Vue {
     $matomo!: any | undefined
 
     handleAcceptCookies () {
@@ -59,7 +59,7 @@ class Default extends Vue {
     }
   }
 
-export default Default
+  export default Default
 </script>
 
 <style lang="scss">

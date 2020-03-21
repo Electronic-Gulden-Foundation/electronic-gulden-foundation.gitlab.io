@@ -27,21 +27,22 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
+  import { Component, Vue } from 'vue-property-decorator'
 
-@Component
-class FrontPageCarousel extends Vue {}
+  @Component
+  class FrontPageCarousel extends Vue {
+  }
 
-export default FrontPageCarousel
+  export default FrontPageCarousel
 </script>
 
 <style lang="scss" scoped>
-.mission-statements,
-.mission-statement {
-  @include efl-orange-gradient-background;
+  .mission-statements,
+  .mission-statement {
+    @include efl-orange-gradient-background;
 
-  .mission-statement-text {
-    padding: 25px;
+    .mission-statement-text {
+      padding: 25px;
+    }
   }
-}
 </style>

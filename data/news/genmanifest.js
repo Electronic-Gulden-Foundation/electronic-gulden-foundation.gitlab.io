@@ -1,12 +1,13 @@
 const fs = require('fs')
+const path = require('path')
 const slugify = require('slugify')
 
-const BASE_NEWS_PATH = __dirname + '/items/'
+const BASE_NEWS_PATH = path.join(__dirname, '/items/')
 const SLUGIFY_OPTIONS = {
   remove: /[*+~.,()'"!:@]/g
 }
 
-const listRecursive = (dir, fileList, extension) => {
+const listRecursive = (dir, fileList) => {
   fileList = fileList || []
 
   const files = fs.readdirSync(dir)
@@ -58,8 +59,9 @@ const news = listRecursive(BASE_NEWS_PATH)
   })
   .sort((a, b) => b.date - a.date)
 
-const manifestFile = __dirname + '/newsmanifest.json'
+const manifestFile = path.join(__dirname, '/newsmanifest.json')
 
 fs.writeFileSync(manifestFile, JSON.stringify(news))
 
+// eslint-disable-next-line no-console
 console.log('Wrote ' + news.length + ' news items to ' + manifestFile)

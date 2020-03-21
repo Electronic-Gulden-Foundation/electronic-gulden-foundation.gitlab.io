@@ -13,13 +13,13 @@
       :key="member.name"
       class="team-member"
     >
-      <b-col md="12" class="spacer my-4" />
+      <b-col class="spacer my-4" md="12" />
 
-      <b-col xl="3" md="4" sm="12" class="left d-flex align-items-center justify-content-center">
+      <b-col class="left d-flex align-items-center justify-content-center" md="4" sm="12" xl="3">
         <div
           v-if="member.photo"
-          class="background-image"
           :style="{'background-image': `url('${member.photo}')`}"
+          class="background-image"
         />
         <div
           v-else
@@ -42,8 +42,8 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
-import { faUser } from '@fortawesome/free-solid-svg-icons'
+  import { Component, Vue } from 'vue-property-decorator'
+  import { faUser } from '@fortawesome/free-solid-svg-icons'
 
   @Component({
     layout: 'thin',
@@ -53,7 +53,7 @@ import { faUser } from '@fortawesome/free-solid-svg-icons'
       }
     }
   })
-export default class TeamPage extends Vue {
+  export default class TeamPage extends Vue {
     TeamText = require('~/locales/text/team.md').default
     noImageIcon = faUser
 
@@ -64,7 +64,7 @@ export default class TeamPage extends Vue {
         descriptionExpanded: false
       }
     })
-}
+  }
 </script>
 
 <style lang="scss" scoped>

@@ -80,18 +80,18 @@
 </template>
 
 <script lang="ts">
-import SocialSharing from 'vue-social-sharing'
+  import SocialSharing from 'vue-social-sharing'
 
-import { Component, Vue } from 'vue-property-decorator'
-import { getItemByLink, getNextNewsItem, getPreviousNewsItem, NewsItem } from '~/data/news'
-import { faArrowLeft, faArrowRight, faEnvelope } from '~/node_modules/@fortawesome/free-solid-svg-icons'
-import {
-  faFacebook,
-  faLinkedinIn,
-  faTelegram,
-  faTwitter,
-  faWhatsapp
-} from '~/node_modules/@fortawesome/free-brands-svg-icons'
+  import { Component, Vue } from 'vue-property-decorator'
+  import { getItemByLink, getNextNewsItem, getPreviousNewsItem, NewsItem } from '~/data/news'
+  import { faArrowLeft, faArrowRight, faEnvelope } from '~/node_modules/@fortawesome/free-solid-svg-icons'
+  import {
+    faFacebook,
+    faLinkedinIn,
+    faTelegram,
+    faTwitter,
+    faWhatsapp
+  } from '~/node_modules/@fortawesome/free-brands-svg-icons'
 
   @Component({
     layout: 'thin',
@@ -104,7 +104,7 @@ import {
       }
     }
   })
-class Slug extends Vue {
+  class Slug extends Vue {
     socialNetworks = [
       { id: 'email', icon: faEnvelope },
       { id: 'facebook', icon: faFacebook },
@@ -122,7 +122,9 @@ class Slug extends Vue {
     }
 
     get contents (): string | undefined {
-      if (this.item === undefined) { return undefined }
+      if (this.item === undefined) {
+        return undefined
+      }
 
       try {
         return require(`~/data/news/items/${this.item.path}`).default
@@ -132,7 +134,9 @@ class Slug extends Vue {
     }
 
     get title () {
-      if (this.item === undefined) { return undefined }
+      if (this.item === undefined) {
+        return undefined
+      }
 
       return this.item.title
     }
@@ -166,7 +170,7 @@ class Slug extends Vue {
     }
   }
 
-export default Slug
+  export default Slug
 </script>
 
 <style lang="scss" scoped>

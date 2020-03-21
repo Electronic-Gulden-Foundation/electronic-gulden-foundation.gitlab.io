@@ -146,21 +146,21 @@
 </template>
 
 <script lang="ts">
-import { Component, Mixins } from 'vue-property-decorator'
+  import { Component, Mixins } from 'vue-property-decorator'
 
-import { faPlayCircle } from '@fortawesome/free-solid-svg-icons'
+  import { faPlayCircle } from '@fortawesome/free-solid-svg-icons'
 
-import WalletsMixin from '~/components/mixins/WalletsMixin'
+  import WalletsMixin from '~/components/mixins/WalletsMixin'
 
-import FrontPageCarousel from '~/components/frontpage/FrontPageCarousel.vue'
-import FrontPageExchanges from '~/components/frontpage/FrontPageExchanges.vue'
-import FrontPageSocialMedia from '~/components/frontpage/FrontPageSocialMedia.vue'
-import FrontPageTicker from '~/components/frontpage/FrontPageTicker.vue'
-import FrontPageWalletDownload from '~/components/frontpage/FrontPageWalletDownload.vue'
-import MissionStatement from '~/components/frontpage/MissionStatement.vue'
-import News from '~/components/frontpage/News.vue'
+  import FrontPageCarousel from '~/components/frontpage/FrontPageCarousel.vue'
+  import FrontPageExchanges from '~/components/frontpage/FrontPageExchanges.vue'
+  import FrontPageSocialMedia from '~/components/frontpage/FrontPageSocialMedia.vue'
+  import FrontPageTicker from '~/components/frontpage/FrontPageTicker.vue'
+  import FrontPageWalletDownload from '~/components/frontpage/FrontPageWalletDownload.vue'
+  import MissionStatement from '~/components/frontpage/MissionStatement.vue'
+  import News from '~/components/frontpage/News.vue'
 
-import Laptop from '~/assets/img/laptop-white-bg.png'
+  import Laptop from '~/assets/img/laptop-white-bg.png'
 
   @Component({
     components: {
@@ -178,7 +178,7 @@ import Laptop from '~/assets/img/laptop-white-bg.png'
       }
     }
   })
-class Index extends Mixins(WalletsMixin) {
+  class Index extends Mixins(WalletsMixin) {
     laptopDisplayStyles = {
       backgroundImage: `url('${Laptop}')`,
       width: Laptop.width,
@@ -189,7 +189,7 @@ class Index extends Mixins(WalletsMixin) {
     laptopVideoUrl = 'https://www.youtube-nocookie.com/embed/BtWSWYBH4TE?autoplay=1'
   }
 
-export default Index
+  export default Index
 </script>
 
 <style lang="scss" scoped>

@@ -32,48 +32,48 @@
 </template>
 
 <script lang="ts">
-import { Component, Mixins } from 'vue-property-decorator'
-import TickerMixin, { TickerInfo } from '~/components/mixins/TickerMixin'
+  import { Component, Mixins } from 'vue-property-decorator'
+  import TickerMixin, { TickerInfo } from '~/components/mixins/TickerMixin'
 
-@Component
-class FrontpageTicker extends Mixins(TickerMixin) {
-  tickerInfo: TickerInfo | null = null
+  @Component
+  class FrontpageTicker extends Mixins(TickerMixin) {
+    tickerInfo: TickerInfo | null = null
 
-  mounted () {
-    this.loadTickerInfo()
+    mounted () {
+      this.loadTickerInfo()
+    }
+
+    async loadTickerInfo () {
+      this.tickerInfo = await this.getTickerInfo()
+    }
   }
 
-  async loadTickerInfo () {
-    this.tickerInfo = await this.getTickerInfo()
-  }
-}
-
-export default FrontpageTicker
+  export default FrontpageTicker
 </script>
 
 <style lang="scss" scoped>
-.ticker-info {
-  display: flex;
-  justify-content: space-between;
+  .ticker-info {
+    display: flex;
+    justify-content: space-between;
 
-  dt {
-    text-transform: uppercase;
-    color: $gray-500;
-    font-weight: 400;
-    padding: 10px 0;
-  }
-
-  @include media-breakpoint-down(sm) {
-    flex-direction: column;
-
-    dd, dt {
-      display: inline-block;
-      width: 49%;
+    dt {
+      text-transform: uppercase;
+      color: $gray-500;
+      font-weight: 400;
+      padding: 10px 0;
     }
 
-    dd {
-      text-align: right;
+    @include media-breakpoint-down(sm) {
+      flex-direction: column;
+
+      dd, dt {
+        display: inline-block;
+        width: 49%;
+      }
+
+      dd {
+        text-align: right;
+      }
     }
   }
-}
 </style>

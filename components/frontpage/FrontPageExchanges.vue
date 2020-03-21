@@ -31,14 +31,14 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
+  import { Component, Vue } from 'vue-property-decorator'
 
-@Component
-class FrontPageExchanges extends Vue {
-  exchanges = require('~/data/exchanges').default
-}
+  @Component
+  class FrontPageExchanges extends Vue {
+    exchanges = require('~/data/exchanges').default
+  }
 
-export default FrontPageExchanges
+  export default FrontPageExchanges
 </script>
 
 <style lang="scss" scoped>
@@ -59,8 +59,8 @@ export default FrontPageExchanges
     text-align: center;
 
     img {
-			padding: 5px;
-			height: 100px;
+      padding: 5px;
+      height: 100px;
     }
   }
 </style>

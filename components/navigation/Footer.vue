@@ -60,63 +60,63 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
+  import { Component, Vue } from 'vue-property-decorator'
 
-@Component
-class Footer extends Vue {
-  footerItems = [
-    {
-		  title: 'footer.socialMedia',
-      items: require('~/data/social-media').default
-    },
-    {
-		  title: 'footer.exchanges',
-      items: require('~/data/exchanges').default
-    },
-    {
-		  title: 'footer.pools',
-      items: require('~/data/pools').default
-    },
-    {
-		  title: 'footer.blockexplorers',
-      items: require('~/data/blockexplorers').default
-    },
-    {
-		  title: 'footer.onlineWallets',
-      items: require('~/data/online-wallets').default
-    }
-  ]
-}
+  @Component
+  class Footer extends Vue {
+    footerItems = [
+      {
+        title: 'footer.socialMedia',
+        items: require('~/data/social-media').default
+      },
+      {
+        title: 'footer.exchanges',
+        items: require('~/data/exchanges').default
+      },
+      {
+        title: 'footer.pools',
+        items: require('~/data/pools').default
+      },
+      {
+        title: 'footer.blockexplorers',
+        items: require('~/data/blockexplorers').default
+      },
+      {
+        title: 'footer.onlineWallets',
+        items: require('~/data/online-wallets').default
+      }
+    ]
+  }
 
-export default Footer
+  export default Footer
 </script>
 
 <style lang="scss" scoped>
-footer {
-	background-color: #353535;
-	width: 100%;
-	padding: 25px;
-	color: #fff;
-	font-size: 0.9rem;
+  footer {
+    background-color: #353535;
+    width: 100%;
+    padding: 25px;
+    color: #fff;
+    font-size: 0.9rem;
 
-	ul {
-		list-style-type: none;
-		padding-left: 0;
+    ul {
+      list-style-type: none;
+      padding-left: 0;
 
-		li {
-			padding-left: 0;
-		}
-	}
+      li {
+        padding-left: 0;
+      }
+    }
 
-	.link-wrapper {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		align-content: space-evenly;
+    .link-wrapper {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-content: space-evenly;
 
-		.link-group {
-			min-width: 200px;
-		}
-	}
-}
+      .link-group {
+        min-width: 200px;
+      }
+    }
+  }
 </style>

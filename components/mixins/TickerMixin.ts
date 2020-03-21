@@ -26,6 +26,7 @@ class TickerMixin extends Vue {
         dayVolumeEur: data.eur_24h_vol
       }
     } catch (e) {
+      // eslint-disable-next-line no-console
       console.error(e)
 
       return {

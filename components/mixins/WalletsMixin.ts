@@ -1,11 +1,5 @@
 import { Component, Vue } from 'vue-property-decorator'
-import {
-  faAndroid,
-  faApple,
-  faLinux,
-  faRaspberryPi,
-  faWindows
-} from '@fortawesome/free-brands-svg-icons'
+import { faAndroid, faApple, faLinux, faRaspberryPi, faWindows } from '@fortawesome/free-brands-svg-icons'
 import { faFileArchive } from '@fortawesome/free-solid-svg-icons'
 
 @Component

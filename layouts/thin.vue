@@ -13,14 +13,14 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
-import DefaultLayout from '~/components/layouts/default.vue'
+  import { Component, Vue } from 'vue-property-decorator'
+  import DefaultLayout from '~/components/layouts/default.vue'
 
   @Component({
     components: {
       DefaultLayout
     }
   })
-export default class Thin extends Vue {
-}
+  export default class Thin extends Vue {
+  }
 </script>

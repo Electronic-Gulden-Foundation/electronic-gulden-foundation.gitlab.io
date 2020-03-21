@@ -6,22 +6,22 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
+  import { Component, Vue } from 'vue-property-decorator'
 
-import MissionStatementText from '~/locales/text/missie.md'
+  import MissionStatementText from '~/locales/text/missie.md'
 
-@Component
-class MissionStatement extends Vue {
-  MissionStatementText = MissionStatementText
-}
+  @Component
+  class MissionStatement extends Vue {
+    MissionStatementText = MissionStatementText
+  }
 
-export default MissionStatement
+  export default MissionStatement
 </script>
 
 <style lang="scss" scoped>
-.mission-statement {
-  @include efl-orange-gradient-background;
+  .mission-statement {
+    @include efl-orange-gradient-background;
 
-  padding: 25px;
-}
+    padding: 25px;
+  }
 </style>
