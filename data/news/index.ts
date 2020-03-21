@@ -27,7 +27,7 @@ export const getAllNewsItems = (): NewsItem[] => {
 
 export const getItemByLink = (link: string): NewsItem | undefined => {
   return indexedByLink.has(link)
-    ? indexedByLink[link]
+    ? indexedByLink.get(link)
     : undefined
 }
 
