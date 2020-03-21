@@ -41,9 +41,9 @@
                 </client-only>
 
                 <a
+                  v-scroll-to="'#wallet-verions'"
                   href=""
                   class="d-block text-center small"
-                  v-scroll-to="'#wallet-verions'"
                 >
                   {{ $t('pages.index.buttons.downloadWalletOtherVersions') }}
                 </a>
