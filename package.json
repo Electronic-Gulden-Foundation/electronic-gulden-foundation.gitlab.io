@@ -5,7 +5,7 @@
   "author": "Electronic Gulden Foundation <support@egulden.org>",
   "private": true,
   "scripts": {
-    "dev": "npm run generate-news-manifest && nuxt-ts dev",
+    "dev": "npm run generate-news-manifest && nuxt-ts",
     "build": "npm run generate-news-manifest && nuxt-ts build",
     "start": "npm run generate-news-manifest && nuxt-ts start",
     "generate-news-manifest": "node ./data/news/genmanifest.js",

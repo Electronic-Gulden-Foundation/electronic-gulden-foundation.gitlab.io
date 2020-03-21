@@ -17,7 +17,7 @@
 
             <b-row>
               <b-col sm="6">
-                <div class="title-divider"/>
+                <div class="title-divider" />
               </b-col>
             </b-row>
 
@@ -35,7 +35,7 @@
                     size="lg"
                   >
                     {{ $t('pages.index.buttons.downloadWallet', {
-                    walletName: bestMatchingWalletVersion.name
+                      walletName: bestMatchingWalletVersion.name
                     }) }}
                   </b-btn>
                 </client-only>
@@ -95,7 +95,7 @@
 
         <b-row class="row-margin">
           <b-col class="py-4">
-            <front-page-carousel/>
+            <front-page-carousel />
           </b-col>
         </b-row>
 
@@ -104,40 +104,40 @@
             cols="12"
             md="6"
           >
-            <mission-statement/>
+            <mission-statement />
           </b-col>
 
           <b-col
             cols="12"
             md="6"
           >
-            <news/>
+            <news />
           </b-col>
         </b-row>
 
         <b-row class="row-margin">
           <b-col>
-            <front-page-social-media/>
+            <front-page-social-media />
           </b-col>
         </b-row>
 
         <b-row class="row-margin">
           <b-col>
-            <front-page-ticker/>
+            <front-page-ticker />
           </b-col>
         </b-row>
 
         <b-row class="row-margin">
           <b-col sm="4">
-            <front-page-exchanges/>
+            <front-page-exchanges />
           </b-col>
 
           <b-col
-            id="wallet-verions"
+            id="wallet-versions"
             class="wallet-download-background"
             sm="8"
           >
-            <front-page-wallet-download/>
+            <front-page-wallet-download />
           </b-col>
         </b-row>
       </b-container>
@@ -146,21 +146,21 @@
 </template>
 
 <script lang="ts">
-  import { Component, Mixins } from 'vue-property-decorator'
+import { Component, Mixins } from 'vue-property-decorator'
 
-  import { faPlayCircle } from '@fortawesome/free-solid-svg-icons'
+import { faPlayCircle } from '@fortawesome/free-solid-svg-icons'
 
-  import WalletsMixin from '~/components/mixins/WalletsMixin'
+import WalletsMixin from '~/components/mixins/WalletsMixin'
 
-  import FrontPageCarousel from '~/components/frontpage/FrontPageCarousel.vue'
-  import FrontPageExchanges from '~/components/frontpage/FrontPageExchanges.vue'
-  import FrontPageSocialMedia from '~/components/frontpage/FrontPageSocialMedia.vue'
-  import FrontPageTicker from '~/components/frontpage/FrontPageTicker.vue'
-  import FrontPageWalletDownload from '~/components/frontpage/FrontPageWalletDownload.vue'
-  import MissionStatement from '~/components/frontpage/MissionStatement.vue'
-  import News from '~/components/frontpage/News.vue'
+import FrontPageCarousel from '~/components/frontpage/FrontPageCarousel.vue'
+import FrontPageExchanges from '~/components/frontpage/FrontPageExchanges.vue'
+import FrontPageSocialMedia from '~/components/frontpage/FrontPageSocialMedia.vue'
+import FrontPageTicker from '~/components/frontpage/FrontPageTicker.vue'
+import FrontPageWalletDownload from '~/components/frontpage/FrontPageWalletDownload.vue'
+import MissionStatement from '~/components/frontpage/MissionStatement.vue'
+import News from '~/components/frontpage/News.vue'
 
-  import Laptop from '~/assets/img/laptop-white-bg.png'
+import Laptop from '~/assets/img/laptop-white-bg.png'
 
   @Component({
     components: {
@@ -172,13 +172,13 @@
       MissionStatement,
       News
     },
-    head(this: Index) {
+    head (this: Index) {
       return {
         title: this.$t('pages.index.head.title').toString()
       }
     }
   })
-  class Index extends Mixins(WalletsMixin) {
+class Index extends Mixins(WalletsMixin) {
     laptopDisplayStyles = {
       backgroundImage: `url('${Laptop}')`,
       width: Laptop.width,
@@ -189,7 +189,7 @@
     laptopVideoUrl = 'https://www.youtube-nocookie.com/embed/BtWSWYBH4TE?autoplay=1'
   }
 
-  export default Index
+export default Index
 </script>
 
 <style lang="scss" scoped>

@@ -27,6 +27,13 @@ export const messages = {
     news: {
       share: 'Dit artikel delen',
       notFound: 'Item niet gevonden :('
+    },
+    team: {
+      head: {
+        title: 'Het Team'
+      },
+      readMore: 'Meer lezen...',
+      readLess: 'Minder lezen...'
     }
   },
   exchanges: {

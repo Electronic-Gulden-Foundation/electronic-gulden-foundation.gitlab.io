@@ -1,6 +1,14 @@
 <template>
   <default-layout>
-    <nuxt />
+    <b-container>
+      <b-row class="justify-content-center">
+        <b-col sm="12" md="10" xl="8">
+          <b-row>
+            <nuxt />
+          </b-row>
+        </b-col>
+      </b-row>
+    </b-container>
   </default-layout>
 </template>
 
@@ -13,6 +21,6 @@ import DefaultLayout from '~/components/layouts/default.vue'
       DefaultLayout
     }
   })
-export default class Default extends Vue {
+export default class Thin extends Vue {
 }
 </script>
