@@ -12,6 +12,19 @@
 
           <p>{{ $t('footer.foundation.kvk') }}</p>
           <p>{{ $t('footer.foundation.contact') }}</p>
+          
+          <h4 class="footer-title">
+            {{ $t('footer.community.title') }}
+          </h4>
+
+          <p>
+            <a
+              href="team"
+              target="_blank"
+            >
+              {{ $t('footer.community.faces') }}
+            </a>
+          </p>          
         </b-col>
 
         <b-col>
@@ -84,6 +97,10 @@
       {
         title: 'footer.onlineWallets',
         items: require('~/data/online-wallets').default
+      },
+      {
+        title: 'footer.other',
+        items: require('~/data/other').default
       }
     ]
   }
