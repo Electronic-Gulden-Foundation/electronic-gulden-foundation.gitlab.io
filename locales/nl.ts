@@ -47,11 +47,16 @@ export const messages = {
     onlineWallets: 'Online Wallets',
     pools: 'Mining Pools',
     socialMedia: 'Social Media',
+    other: 'Overige',
     foundation: {
       title: 'De Foundation',
       kvk:
         'De Electronic Gulden Foundation is geregistreerd bij de kamer van koophandel onder nummer 61016764',
       contact: 'Neem contact op: support@egulden.org'
+    },
+    community: {
+      title: 'De community',
+      faces: 'Ontmoet Team-2020'
     }
   },
   ticker: {
