@@ -12,19 +12,16 @@
 
           <p>{{ $t('footer.foundation.kvk') }}</p>
           <p>{{ $t('footer.foundation.contact') }}</p>
-          
+
           <h4 class="footer-title">
             {{ $t('footer.community.title') }}
           </h4>
 
           <p>
-            <a
-              href="team"
-              target="_blank"
-            >
+            <router-link to="/team">
               {{ $t('footer.community.faces') }}
-            </a>
-          </p>          
+            </router-link>
+          </p>
         </b-col>
 
         <b-col>
