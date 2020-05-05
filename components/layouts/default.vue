@@ -7,7 +7,7 @@
       </div>
     </div>
 
-    <b-row>
+    <b-row class="menu-wrapper">
       <b-container>
         <top-menu />
       </b-container>
@@ -62,7 +62,11 @@
   export default Default
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+  .menu-wrapper {
+    background-color: #fff;
+  }
+
   .background-image-container {
     position: absolute;
 

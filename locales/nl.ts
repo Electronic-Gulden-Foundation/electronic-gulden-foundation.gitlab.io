@@ -28,6 +28,22 @@ export const messages = {
       share: 'Dit artikel delen',
       notFound: 'Item niet gevonden :('
     },
+    search: {
+      head: {
+        title: 'Zoeken'
+      },
+      input: {
+        label: '',
+        placeholder: 'Zoeken'
+      },
+      results: 'Zoekresultaten...',
+      table: {
+        title: 'Titel',
+        date: 'Datum',
+        category: 'Categorie',
+        fragment: 'Fragment'
+      }
+    },
     team: {
       head: {
         title: 'Het Team'
