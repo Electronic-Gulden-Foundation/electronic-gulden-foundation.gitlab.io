@@ -30,7 +30,17 @@
 
     <b-row>
       <b-col>
-        <b-table :fields="tableFields" :items="searchResults" class="bg-white" responsive>
+        <div v-if="isLoading" class="text-center text-primary">
+          <b-spinner />
+        </div>
+
+        <b-table
+          v-else
+          :fields="tableFields"
+          :items="searchResults"
+          class="bg-white"
+          responsive
+        >
           <template v-slot:cell(titel)="{ item }">
             <router-link :to="item.url" v-if="item.isInternalLink">
               {{ item.titel }}
@@ -80,6 +90,8 @@
     searchIcon = faSearch
     searchResults: SearchResultItem[] = []
 
+    isLoading = false
+
     get tableFields () {
       return [
         {
@@ -106,7 +118,10 @@
     }
 
     async doSearch (): Promise<any> {
+      this.isLoading = true
       const response: SearchResult = await axios.get(`https://e-gulden.org/zoek2.php?${this.searchInput}`)
+
+      this.isLoading = false
 
       console.log(response)
     }
