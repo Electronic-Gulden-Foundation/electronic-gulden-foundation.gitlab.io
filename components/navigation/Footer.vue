@@ -40,10 +40,10 @@
                   v-for="item in footerItem.items"
                   :key="item.name"
                 >
-                  <a
-                    :href="item.href"
-                    target="_blank"
-                  >
+                  <router-link v-if="item.href.startsWith('/')" :to="item.href">
+                    {{ item.name }}
+                  </router-link>
+                  <a v-else :href="item.href" target="_blank">
                     {{ item.name }}
                   </a>
                 </li>
@@ -73,7 +73,7 @@
   import { Component, Vue } from 'vue-property-decorator'
 
   @Component
-  class Footer extends Vue {
+  export default class Footer extends Vue {
     footerItems = [
       {
         title: 'footer.socialMedia',
@@ -101,8 +101,6 @@
       }
     ]
   }
-
-  export default Footer
 </script>
 
 <style lang="scss" scoped>
