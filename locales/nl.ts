@@ -38,6 +38,7 @@ export const messages = {
       },
       results: 'Zoekresultaten...',
       table: {
+        noResults: 'Geen zoekresultaten...',
         title: 'Titel',
         date: 'Datum',
         category: 'Categorie',

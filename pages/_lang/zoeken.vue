@@ -38,9 +38,16 @@
           v-else
           :fields="tableFields"
           :items="searchResults"
-          class="bg-white"
           responsive
+          show-empty
+          class="bg-white"
         >
+          <template v-slot:empty>
+            <i class="d-block text-center font-larger">
+              {{ $t('pages.search.table.noResults') }}
+            </i>
+          </template>
+
           <template v-slot:cell(titel)="{ item }">
             <router-link :to="item.url" v-if="item.isInternalLink">
               {{ item.titel }}
@@ -60,7 +67,7 @@
 </template>
 
 <script lang="ts">
-  import axios from 'axios'
+  import axios, { AxiosResponse } from 'axios'
   import { Component, Vue } from 'vue-property-decorator'
   import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
@@ -113,17 +120,14 @@
       ]
     }
 
-    mounted () {
-      this.setSearchResultItems(require('./zoekresultaten.json'))
-    }
-
     async doSearch (): Promise<any> {
       this.isLoading = true
-      const response: SearchResult = await axios.get(`https://e-gulden.org/zoek2.php?${this.searchInput}`)
+      const response: AxiosResponse<SearchResult | null> = await axios.get(`https://e-gulden.org/zoek2.php?${this.searchInput}`)
+      const result: SearchResult = response.data || {}
+
+      this.setSearchResultItems(result)
 
       this.isLoading = false
-
-      console.log(response)
     }
 
     setSearchResultItems (input: SearchResult) {
