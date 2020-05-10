@@ -29,18 +29,19 @@
     </b-row>
 
     <b-row>
-      <b-col>
-        <div v-if="isLoading" class="text-center text-primary">
-          <b-spinner />
-        </div>
+      <b-col v-if="!hasSearched"></b-col>
 
+      <b-col class="text-center text-primary" v-else-if="isLoading">
+        <b-spinner/>
+      </b-col>
+
+      <b-col v-else>
         <b-table
-          v-else
           :fields="tableFields"
           :items="searchResults"
+          class="bg-white border-bottom"
           responsive
           show-empty
-          class="bg-white"
         >
           <template v-slot:empty>
             <i class="d-block text-center font-larger">
@@ -86,7 +87,7 @@
   }
 
   @Component({
-    head (this: SearchPage) {
+    head(this: SearchPage) {
       return {
         title: this.$t('pages.search.head.title').toString()
       }
@@ -97,9 +98,10 @@
     searchIcon = faSearch
     searchResults: SearchResultItem[] = []
 
+    hasSearched = false
     isLoading = false
 
-    get tableFields () {
+    get tableFields() {
       return [
         {
           key: 'titel',
@@ -120,8 +122,10 @@
       ]
     }
 
-    async doSearch (): Promise<any> {
+    async doSearch(): Promise<any> {
+      this.hasSearched = true
       this.isLoading = true
+
       const response: AxiosResponse<SearchResult | null> = await axios.get(`https://e-gulden.org/zoek2.php?${this.searchInput}`)
       const result: SearchResult = response.data || {}
 
@@ -130,7 +134,7 @@
       this.isLoading = false
     }
 
-    setSearchResultItems (input: SearchResult) {
+    setSearchResultItems(input: SearchResult) {
       this.searchResults = Object.values(input)
         .map((original) => {
           const item = {

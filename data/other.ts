@@ -1,22 +1,18 @@
 export default [
   {
     name: 'EFL vriendencampagne',
-    href: 'https://egulden.org/vrienden.php',
-    certified: true
+    href: 'https://egulden.org/vrienden.php'
   },
   {
-    name: 'Zoek ...',
-    href: 'https://egulden.org/zoek.php',
-    certified: true
+    name: 'Zoeken...',
+    href: '/zoeken'
   },
   {
     name: 'WIKI',
-    href: 'https://wiki.egulden.org',
-    certified: true
+    href: 'https://wiki.egulden.org'
   },
   {
-    name: 'Nieuwbrief',
-    href: 'https://e-gulden.org/index.php/nieuwsbrieven',
-    certified: true
+    name: 'Nieuwsbrief',
+    href: 'https://e-gulden.org/index.php/nieuwsbrieven'
   }
 ]
