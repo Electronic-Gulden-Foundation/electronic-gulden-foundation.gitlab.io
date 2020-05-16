@@ -8,8 +8,12 @@
 
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav class="ml-auto">
-        <b-nav-item :to="{ name: 'team' }" class="px-3">
-          Team
+        <b-nav-item :to="{ name: 'team' }">
+          {{ $t('navigation.topMenu.team') }}
+        </b-nav-item>
+
+        <b-nav-item href="https://wiki.egulden.org/">
+          {{ $t('navigation.topMenu.wiki') }}
         </b-nav-item>
 
         <b-nav-item :to="{ name: 'zoeken' }" class="search">
