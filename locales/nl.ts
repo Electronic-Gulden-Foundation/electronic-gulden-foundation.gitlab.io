@@ -56,6 +56,12 @@ export const messages = {
   exchanges: {
     title: 'Handelen'
   },
+  navigation: {
+    topMenu: {
+      team: 'Team',
+      wiki: 'Wiki'
+    }
+  },
   footer: {
     blockexplorers: 'Block Explorers',
     copyRightText: 'De eGulden Community',
